@@ -1,7 +1,10 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function LandingPage() {
+  const navigate = useNavigate();
+
   const containerVariants = {
     hidden: { opacity: 0, y: "100%" },
     visible: {
@@ -75,13 +78,30 @@ export function LandingPage() {
           {skills.map((skill, index) => (
             <motion.li
               key={index}
-              className="bg-orange dark:bg-blue w-fit rounded-full p-2 text-sm"
+              className="text-sm underline"
               variants={skillVariants}
             >
               {skill}
             </motion.li>
           ))}
         </motion.ul>
+      </motion.div>
+      <motion.div 
+        className="flex items-center gap-x-8" 
+        initial="hidden" animate="visible" 
+        variants={containerVariants}>
+        <motion.button 
+          className="mt-10 rounded-md text-black p-2 w-fit dark:bg-blue bg-orange" 
+          whileHover={{scale: 1.1}} 
+          onClick={() => navigate('/projects')}>
+          My Projects
+        </motion.button>
+        <motion.button 
+          className="mt-10 rounded-md text-black p-2 w-fit dark:bg-blue bg-orange" 
+          whileHover={{scale: 1.1}} 
+          onClick={() => navigate('/contact')}>
+          Contact Me
+        </motion.button>
       </motion.div>
     </main>
   );
