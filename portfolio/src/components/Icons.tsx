@@ -1,13 +1,15 @@
 type Props = {
   className?: string;
+  onClick?: () => void;
 };
 
-export function GitHubIcon({ className }: Props) {
+export function GitHubIcon({ className, onClick }: Props) {
   return (
     <svg
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      onClick={onClick}
     >
       <path
         fillRule="evenodd"
@@ -18,17 +20,34 @@ export function GitHubIcon({ className }: Props) {
   );
 }
 
-export function LinkedInIcon({ className }: Props) {
+export function LinkedInIcon({ className, onClick }: Props) {
   return (
     <svg
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      onClick={onClick}
     >
       <path
         fillRule="evenodd"
         d="M20.33 2c.922 0 1.67.748 1.67 1.67v16.66A1.67 1.67 0 0 1 20.33 22H3.67A1.67 1.67 0 0 1 2 20.33V3.67C2 2.749 2.748 2 3.67 2h16.66Zm-4.811 7.5c-1.42 0-2.39.627-2.823 1.356l-.071.13V9.625H9.917v9.583h2.916v-4.642c0-1.556.573-2.545 1.95-2.545.95 0 1.349.84 1.381 2.337l.003.208v4.642h2.916v-5.293c0-2.857-.683-4.415-3.564-4.415Zm-7.686 0H4.917v9.583h2.916V9.5Zm-1.458-5a1.875 1.875 0 1 0 0 3.75 1.875 1.875 0 0 0 0-3.75Z"
       />
+    </svg>
+  );
+}
+
+export function MenuIcon({ className, onClick }: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="800"
+      height="800"
+      viewBox="0 0 40 40"
+      className={className}
+      onClick={onClick}
+    >
+      <path d="M34.063 10.625H5.938a.938.938 0 1 1 0-1.875h28.125a.938.938 0 0 1 0 1.875m0 10.313H5.938a.938.938 0 0 1 0-1.876h28.125a.938.938 0 0 1 0 1.876m0 10.312H5.938a.938.938 0 1 1 0-1.875h28.125a.938.938 0 0 1 0 1.875" />
+      <path d="M34.063 20.938H5.938a.938.938 0 0 1 0-1.876h28.125a.938.938 0 0 1 0 1.876" />
     </svg>
   );
 }

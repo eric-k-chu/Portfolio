@@ -1,4 +1,4 @@
-import { GitHubIcon, LinkedInIcon, Logo, ThemeSelector } from ".";
+import { GitHubIcon, LinkedInIcon, Logo, MobileMenu, ThemeSelector } from ".";
 import { Link, Outlet } from "react-router-dom";
 import { GITHUB, LINKEDIN } from "../lib/constants";
 import { motion } from "framer-motion";
@@ -13,7 +13,13 @@ export function NavBar() {
               <Logo />
               <h1 className="font-medium">ERIC CHU</h1>
             </div>
-            <nav className="hidden items-center justify-center gap-x-8 lg:flex">
+            <nav className="hidden items-center justify-center gap-x-8 md:flex">
+              <Link
+                to="/"
+                className="border-b border-transparent hover:border-inherit"
+              >
+                HOME
+              </Link>
               <Link
                 to="/about"
                 className="border-b border-transparent hover:border-inherit"
@@ -33,7 +39,7 @@ export function NavBar() {
                 CONTACT
               </Link>
             </nav>
-            <div className="hidden gap-x-4 lg:flex">
+            <div className="hidden gap-x-4 md:flex">
               <ThemeSelector />
               <motion.a
                 href={GITHUB}
@@ -50,6 +56,7 @@ export function NavBar() {
                 <LinkedInIcon className="h-6 w-6 fill-black dark:fill-white/90" />
               </motion.a>
             </div>
+            <MobileMenu />
           </div>
         </div>
       </header>
