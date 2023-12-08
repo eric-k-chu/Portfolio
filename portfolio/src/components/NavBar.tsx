@@ -1,14 +1,18 @@
-import { FaGithub } from "react-icons/fa";
-import { ThemeSelector } from ".";
+import { GitHubIcon, LinkedInIcon, Logo, ThemeSelector } from ".";
 import { Link, Outlet } from "react-router-dom";
+import { GITHUB, LINKEDIN } from "../lib/constants";
+import { motion } from "framer-motion";
 
 export function NavBar() {
   return (
     <>
-      <header className="mx-auto max-w-6xl px-6">
-        <div className="border-b border-gray py-6">
+      <header className="mx-auto max-w-7xl px-6">
+        <div className="border-b border-gray py-6 dark:border-white/60">
           <div className="flex justify-between">
-            <h1 className="font-medium">ERIC CHU</h1>
+            <div className="flex items-center gap-x-2">
+              <Logo />
+              <h1 className="font-medium">ERIC CHU</h1>
+            </div>
             <nav className="hidden items-center justify-center gap-x-8 lg:flex">
               <Link
                 to="/about"
@@ -31,13 +35,20 @@ export function NavBar() {
             </nav>
             <div className="hidden gap-x-4 lg:flex">
               <ThemeSelector />
-              <a
-                type="button"
+              <motion.a
+                href={GITHUB}
                 target="_blank"
-                href="https://github.com/eric-k-chu"
+                whileHover={{ scale: 1.1 }}
               >
-                <FaGithub className="h-6 w-6" />
-              </a>
+                <GitHubIcon className="h-6 w-6 fill-black dark:fill-white/90" />
+              </motion.a>
+              <motion.a
+                href={LINKEDIN}
+                target="_blank"
+                whileHover={{ scale: 1.1 }}
+              >
+                <LinkedInIcon className="h-6 w-6 fill-black dark:fill-white/90" />
+              </motion.a>
             </div>
           </div>
         </div>
