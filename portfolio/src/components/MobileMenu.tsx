@@ -10,12 +10,18 @@ import {
   ThemeSelector,
 } from ".";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { GITHUB, LINKEDIN } from "../lib/constants";
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   const path = useLocation().pathname;
+
+  function handleNavigate(path: string): void {
+    navigate(path);
+    setIsOpen(false);
+  }
 
   return (
     <section className="block md:hidden">
@@ -44,8 +50,8 @@ export function MobileMenu() {
                 onClick={() => setIsOpen(false)}
               />
             </section>
-            <Link
-              to="/"
+            <button
+              onClick={() => handleNavigate("/")}
               className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-black/10 dark:hover:bg-gray"
             >
               <HomeIcon
@@ -56,9 +62,9 @@ export function MobileMenu() {
                 }`}
               />
               HOME
-            </Link>
-            <Link
-              to="/about"
+            </button>
+            <button
+              onClick={() => handleNavigate("/about")}
               className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-black/10 dark:hover:bg-gray"
             >
               <AboutIcon
@@ -69,9 +75,9 @@ export function MobileMenu() {
                 }`}
               />
               ABOUT
-            </Link>
-            <Link
-              to="/projects"
+            </button>
+            <button
+              onClick={() => handleNavigate("/projects")}
               className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-black/10 dark:hover:bg-gray"
             >
               <ProjectIcon
@@ -82,9 +88,9 @@ export function MobileMenu() {
                 }`}
               />
               PROJECTS
-            </Link>
-            <Link
-              to="/contact"
+            </button>
+            <button
+              onClick={() => handleNavigate("/contact")}
               className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-black/10 dark:hover:bg-gray"
             >
               <ContactIcon
@@ -95,7 +101,7 @@ export function MobileMenu() {
                 }`}
               />
               CONTACT
-            </Link>
+            </button>
             <footer className="mt-auto flex items-center gap-x-6 border-t border-gray p-4 dark:border-white/60">
               <a target="_blank" href={GITHUB}>
                 <GitHubIcon className="h-6 w-6 fill-black hover:cursor-pointer dark:fill-white/90" />

@@ -1,13 +1,9 @@
 import { motion } from "framer-motion";
 import { GITHUB, LINKEDIN, PROJECTS } from "../lib/constants";
 import { GitHubIcon, LinkedInIcon } from "../components";
+import { showAndHide } from "../lib/animations";
 
 export function LandingPage() {
-  const animVariants = {
-    disappear: { opacity: 0 },
-    appear: { opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
-  };
-
   return (
     <>
       <div className="mx-auto mt-20 flex max-w-7xl flex-col-reverse items-center justify-start px-6 lg:mt-40 lg:flex-row lg:justify-evenly">
@@ -16,7 +12,7 @@ export function LandingPage() {
             className="text-xl font-medium md:text-2xl lg:text-4xl"
             initial="disappear"
             animate="appear"
-            variants={animVariants}
+            variants={showAndHide}
           >
             Hi, I'm Eric
           </motion.h1>
@@ -24,7 +20,7 @@ export function LandingPage() {
             className="mt-4 text-base font-light md:text-lg lg:text-2xl"
             initial="disappear"
             animate="appear"
-            variants={animVariants}
+            variants={showAndHide}
           >
             A <span className="text-orange dark:text-blue">Full-Stack</span> Web
             Developer
@@ -33,7 +29,7 @@ export function LandingPage() {
             className="mt-8 flex items-center gap-x-4"
             initial="disappear"
             animate="appear"
-            variants={animVariants}
+            variants={showAndHide}
           >
             <motion.a href={GITHUB} target="_blank" whileHover={{ scale: 1.1 }}>
               <GitHubIcon className="h-6 w-6 fill-black dark:fill-white/90 lg:h-8 lg:w-8" />
@@ -49,7 +45,7 @@ export function LandingPage() {
           <motion.button
             initial="disappear"
             animate="appear"
-            variants={animVariants}
+            variants={showAndHide}
             whileHover={{ scale: 1.1 }}
             className="mt-8 rounded-md bg-orange p-2 px-6 text-sm text-black shadow-md dark:bg-blue md:text-base lg:text-lg"
           >
@@ -60,7 +56,7 @@ export function LandingPage() {
           className="mb-10 flex w-4/12 items-center justify-center lg:mb-0"
           initial="disappear"
           animate="appear"
-          variants={animVariants}
+          variants={showAndHide}
         >
           <img
             src="/profile.jpg"
@@ -79,10 +75,10 @@ export function LandingPage() {
           className="mt-20 flex w-full flex-wrap justify-around gap-8"
           initial="disappear"
           animate="appear"
-          variants={animVariants}
+          variants={showAndHide}
         >
           {PROJECTS.map((n, i) => (
-            <div className="flex flex-col items-center gap-y-2" key={i}>
+            <div className="flex flex-col items-center gap-y-4" key={i}>
               <motion.img
                 src={n.imgSrc}
                 className="h-60 w-60 rounded-lg object-cover shadow-md hover:cursor-pointer lg:h-80 lg:w-80"

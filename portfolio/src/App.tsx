@@ -2,7 +2,7 @@ import { useTheme } from "./hooks";
 import { ThemeContext } from "./components/ThemeContext";
 import { Route, Routes } from "react-router-dom";
 import { NavBar } from "./components";
-import { LandingPage } from "./pages";
+import { LandingPage, AboutPage, NotFoundPage } from "./pages";
 
 export default function App() {
   const { theme, handleSetTheme } = useTheme();
@@ -14,7 +14,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<NavBar />}>
           <Route index element={<LandingPage />} />
+          <Route path="about" element={<AboutPage />} />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </ThemeContext.Provider>
   );
