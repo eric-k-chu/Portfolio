@@ -36,14 +36,14 @@ export function LandingPage() {
             variants={animVariants}
           >
             <motion.a href={GITHUB} target="_blank" whileHover={{ scale: 1.1 }}>
-              <GitHubIcon className="h-8 w-8 fill-black dark:fill-white/90" />
+              <GitHubIcon className="h-6 w-6 fill-black dark:fill-white/90 lg:h-8 lg:w-8" />
             </motion.a>
             <motion.a
               href={LINKEDIN}
               target="_blank"
               whileHover={{ scale: 1.1 }}
             >
-              <LinkedInIcon className="h-8 w-8 fill-black dark:fill-white/90" />
+              <LinkedInIcon className="h-6 w-6 fill-black dark:fill-white/90 lg:h-8 lg:w-8" />
             </motion.a>
           </motion.div>
           <motion.button
@@ -65,7 +65,7 @@ export function LandingPage() {
           <img
             src="/profile.jpg"
             alt="profile pic"
-            className="h-40 w-40 rounded-full object-cover sm:h-60 sm:w-60 lg:h-80 lg:w-80"
+            className="h-30 w-30 rounded-full object-cover sm:h-60 sm:w-60 lg:h-80 lg:w-80"
           />
         </motion.div>
       </div>
@@ -82,13 +82,15 @@ export function LandingPage() {
           variants={animVariants}
         >
           {PROJECTS.map((n, i) => (
-            <motion.img
-              src={n.imgSrc}
-              key={i}
-              className="h-80 w-80 rounded-lg object-cover shadow-md hover:cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              transition={{ ease: "easeInOut" }}
-            />
+            <div className="flex flex-col items-center gap-y-2" key={i}>
+              <motion.img
+                src={n.imgSrc}
+                className="h-60 w-60 rounded-lg object-cover shadow-md hover:cursor-pointer lg:h-80 lg:w-80"
+                whileHover={{ scale: 1.05 }}
+                transition={{ ease: "easeInOut" }}
+              />
+              <h2 className="font-medium italic">{n.title}</h2>
+            </div>
           ))}
         </motion.div>
       </section>
