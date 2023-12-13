@@ -12,29 +12,90 @@ export const GITHUB = "https://github.com/eric-k-chu";
 
 export const LINKEDIN = "https://www.linkedin.com/in/eric-k-chu/";
 
+type Feature = {
+  desc: string;
+  imgSrc: string;
+};
+
 export interface IProject {
   title: string;
   alt: string;
   imgSrc: string;
   desc: string;
+  features: Feature[];
 }
+
 export const PROJECTS: IProject[] = [
   {
     title: "Artus",
     alt: "screenshot of Artus homepage",
     imgSrc: "/artus.png",
-    desc: "A full-stack video-hosting web application.",
+    desc: "A full-stack video-hosting web application",
+    features: [
+      {
+        desc: "fdsa",
+        imgSrc: "test",
+      },
+      {
+        desc: "fdsa",
+        imgSrc: "test",
+      },
+      {
+        desc: "fdsa",
+        imgSrc: "test",
+      },
+      {
+        desc: "fdsa",
+        imgSrc: "test",
+      },
+    ],
   },
   {
     title: "Castle",
     alt: "screenshot of Castle search results",
     imgSrc: "/castle.png",
-    desc: "A player search engine powered by the Chess.com API.",
+    desc: "A player search engine powered by the Chess.com API",
+    features: [
+      {
+        desc: "fdsa",
+        imgSrc: "test",
+      },
+      {
+        desc: "fdsa",
+        imgSrc: "test",
+      },
+      {
+        desc: "fdsa",
+        imgSrc: "test",
+      },
+      {
+        desc: "fdsa",
+        imgSrc: "test",
+      },
+    ],
   },
   {
     title: "Geo Run",
     alt: "screenshot of Geo Run",
     imgSrc: "/geo-run.png",
-    desc: "An endless runner created with Unity.",
+    desc: "An endless runner game created with Unity",
+    features: [
+      {
+        desc: "fdsa",
+        imgSrc: "test",
+      },
+      {
+        desc: "fdsa",
+        imgSrc: "test",
+      },
+      {
+        desc: "fdsa",
+        imgSrc: "test",
+      },
+      {
+        desc: "fdsa",
+        imgSrc: "test",
+      },
+    ],
   },
 ];
