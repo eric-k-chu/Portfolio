@@ -12,7 +12,7 @@ export default function App() {
   return (
     <ThemeContext.Provider value={context}>
       <Routes>
-        <Route path="/Portfolio/" element={<NavBar />}>
+        <Route path="/" element={<NavBar />}>
           <Route index element={<LandingPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="projects" element={<ProjectPage />} />
