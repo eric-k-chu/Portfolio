@@ -4,7 +4,7 @@ import { showAndHide } from "../lib/animations";
 export function AboutPage() {
   return (
     <motion.div
-      className="mx-auto mt-20 flex max-w-4xl flex-col items-center justify-center gap-y-6 px-6 md:flex-row md:gap-x-6"
+      className="mx-auto mt-40 flex max-w-6xl flex-col items-center justify-center gap-y-12 px-6 md:flex-row md:gap-x-12"
       initial="disappear"
       animate="appear"
       variants={showAndHide}
@@ -15,8 +15,8 @@ export function AboutPage() {
           Hi There <span>&#128075;</span>
         </h1>
         <h2 className="text-sm font-normal md:text-lg">I'm Eric.</h2>
-        <p className="text-sm font-light leading-loose">
-          I'm a junior level full-stack software engineer, currently livining in
+        <p className="text-sm font-normal leading-loose">
+          I'm a junior level full-stack software engineer, currently living in
           California. I graduated from{" "}
           <a
             className="text-orange after:content-['_↗'] hover:cursor-pointer dark:text-blue"

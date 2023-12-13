@@ -6,7 +6,7 @@ import { showAndHide } from "../lib/animations";
 export function LandingPage() {
   return (
     <>
-      <div className="mx-auto mt-20 flex max-w-7xl flex-col-reverse items-center justify-start px-6 lg:mt-40 lg:flex-row lg:justify-evenly">
+      <div className="mx-auto mt-20 flex max-w-7xl flex-col-reverse items-center justify-start px-6 md:mt-40 md:flex-row md:justify-evenly">
         <div className="w-fit">
           <motion.h1
             className="text-xl font-medium md:text-2xl lg:text-4xl"
@@ -53,7 +53,7 @@ export function LandingPage() {
           </motion.button>
         </div>
         <motion.div
-          className="mb-10 flex w-4/12 items-center justify-center lg:mb-0"
+          className="mb-10 flex w-1/2 items-center justify-center lg:mb-0 lg:w-4/12"
           initial="disappear"
           animate="appear"
           variants={showAndHide}
@@ -61,7 +61,7 @@ export function LandingPage() {
           <img
             src="/profile.jpg"
             alt="profile pic"
-            className="h-30 w-30 rounded-full object-cover sm:h-60 sm:w-60 lg:h-80 lg:w-80"
+            className="h-40 w-40 rounded-full object-cover shadow-md md:h-60 md:w-60 lg:h-80 lg:w-80"
           />
         </motion.div>
       </div>

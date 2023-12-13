@@ -13,7 +13,7 @@ export function ProjectCard({ projectInfo }: Props) {
 
   return (
     <article
-      className={`flex w-full items-center p-6 transition-opacity duration-700 ease-in ${
+      className={`mb-[40rem] flex w-full items-center p-6 transition-opacity duration-700 ease-in ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
       ref={ref}
