@@ -12,7 +12,7 @@ export default {
         "dark-3": "#1E1E1E",
         "light-b": "#E2E8F0",
         "light-s": "#2F383D33",
-        gray: "#616161",
+        gray: "#808080",
         orange: "#F0904F",
         blue: "#50E6F0",
       },

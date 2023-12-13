@@ -26,13 +26,13 @@ export function MobileMenu() {
   return (
     <section className="block md:hidden">
       <MenuIcon
-        className="h-7 w-7 fill-black hover:cursor-pointer dark:fill-white/90"
+        className="h-7 w-7 hover:cursor-pointer"
         onClick={() => setIsOpen(true)}
       />
       <div
         className={`fixed inset-0 z-10 transition duration-[300ms] ease-in-out ${
           isOpen
-            ? "bg-slate-900/25 backdrop-blur-sm dark:bg-black/25"
+            ? "bg-slate-900/25 backdrop-blur-sm dark:bg-dark-1/25"
             : "pointer-events-none bg-transparent backdrop-blur-none"
         }`}
       >
@@ -43,71 +43,71 @@ export function MobileMenu() {
         >
           <div className="min-h-full w-full" onClick={() => setIsOpen(false)} />
           <nav className="flex min-h-full min-w-[15rem] flex-col bg-light-1 px-4 shadow-lg dark:bg-dark-1">
-            <section className="flex items-center justify-between border-b border-gray p-4 dark:border-white/60">
+            <section className="flex items-center justify-between border-b border-gray p-4">
               <ThemeSelector />
               <ExitIcon
-                className="h-6 w-6 fill-black hover:cursor-pointer dark:fill-white/90"
+                className="h-6 w-6 fill-dark-1 hover:cursor-pointer dark:fill-light-1"
                 onClick={() => setIsOpen(false)}
               />
             </section>
             <button
               onClick={() => handleNavigate("/")}
-              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-black/10 dark:hover:bg-gray"
+              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10 dark:hover:bg-gray"
             >
               <HomeIcon
                 className={`h-4 w-4 ${
                   path === "/"
                     ? "fill-orange dark:fill-blue"
-                    : "fill-black dark:fill-white/90"
+                    : "fill-dark-1 dark:fill-light-1"
                 }`}
               />
               HOME
             </button>
             <button
               onClick={() => handleNavigate("/about")}
-              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-black/10 dark:hover:bg-gray"
+              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10 dark:hover:bg-gray"
             >
               <AboutIcon
                 className={`h-4 w-4 ${
                   path === "/about"
                     ? "fill-orange dark:fill-blue"
-                    : "fill-black dark:fill-white/90"
+                    : "fill-dark-1 dark:fill-light-1"
                 }`}
               />
               ABOUT
             </button>
             <button
               onClick={() => handleNavigate("/projects")}
-              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-black/10 dark:hover:bg-gray"
+              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10 dark:hover:bg-gray"
             >
               <ProjectIcon
                 className={`h-4 w-4 ${
                   path === "/projects"
                     ? "fill-orange dark:fill-blue"
-                    : "fill-black dark:fill-white/90"
+                    : "fill-dark-1 dark:fill-light-1"
                 }`}
               />
               PROJECTS
             </button>
             <button
               onClick={() => handleNavigate("/contact")}
-              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-black/10 dark:hover:bg-gray"
+              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10 dark:hover:bg-gray"
             >
               <ContactIcon
                 className={`h-4 w-4 ${
                   path === "/contact"
                     ? "fill-orange dark:fill-blue"
-                    : "fill-black dark:fill-white/90"
+                    : "fill-dark-1 dark:fill-light-1"
                 }`}
               />
               CONTACT
             </button>
-            <footer className="mt-auto flex items-center gap-x-6 border-t border-gray p-4 dark:border-white/60">
+            <footer className="mt-auto flex items-center gap-x-6 border-t border-gray p-4">
               <a target="_blank" href={GITHUB}>
-                <GitHubIcon className="h-6 w-6 fill-black hover:cursor-pointer dark:fill-white/90" />
+                <GitHubIcon className="h-6 w-6 fill-dark-1 hover:cursor-pointer dark:fill-light-1" />
               </a>
               <a target="_blank" href={LINKEDIN}>
-                <LinkedInIcon className="h-6 w-6 fill-black hover:cursor-pointer dark:fill-white/90" />
+                <LinkedInIcon className="h-6 w-6 fill-dark-1 hover:cursor-pointer dark:fill-light-1" />
               </a>
             </footer>
           </nav>

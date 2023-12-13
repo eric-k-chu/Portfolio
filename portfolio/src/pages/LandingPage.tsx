@@ -6,7 +6,7 @@ import { showAndHide } from "../lib/animations";
 export function LandingPage() {
   return (
     <>
-      <div className="mx-auto mt-20 flex max-w-7xl flex-col-reverse items-center justify-start px-6 lg:mt-40 lg:flex-row lg:justify-evenly">
+      <div className="mx-auto mt-20 flex max-w-7xl flex-col-reverse items-center justify-start px-6 md:mt-40 md:flex-row md:justify-evenly">
         <div className="w-fit">
           <motion.h1
             className="text-xl font-medium md:text-2xl lg:text-4xl"
@@ -32,14 +32,14 @@ export function LandingPage() {
             variants={showAndHide}
           >
             <motion.a href={GITHUB} target="_blank" whileHover={{ scale: 1.1 }}>
-              <GitHubIcon className="h-6 w-6 fill-black dark:fill-white/90 lg:h-8 lg:w-8" />
+              <GitHubIcon className="h-6 w-6 fill-dark-1 dark:fill-light-1 lg:h-8 lg:w-8" />
             </motion.a>
             <motion.a
               href={LINKEDIN}
               target="_blank"
               whileHover={{ scale: 1.1 }}
             >
-              <LinkedInIcon className="h-6 w-6 fill-black dark:fill-white/90 lg:h-8 lg:w-8" />
+              <LinkedInIcon className="h-6 w-6 fill-dark-1 dark:fill-light-1 lg:h-8 lg:w-8" />
             </motion.a>
           </motion.div>
           <motion.button
@@ -47,13 +47,13 @@ export function LandingPage() {
             animate="appear"
             variants={showAndHide}
             whileHover={{ scale: 1.1 }}
-            className="mt-8 rounded-md bg-orange p-2 px-6 text-sm text-black shadow-md dark:bg-blue md:text-base lg:text-lg"
+            className="mt-8 rounded-md bg-orange p-2 px-6 text-sm text-dark-1 shadow-md dark:bg-blue md:text-base lg:text-lg"
           >
             Hire Me
           </motion.button>
         </div>
         <motion.div
-          className="mb-10 flex w-4/12 items-center justify-center lg:mb-0"
+          className="mb-10 flex w-1/2 items-center justify-center lg:mb-0 lg:w-4/12"
           initial="disappear"
           animate="appear"
           variants={showAndHide}
@@ -61,12 +61,12 @@ export function LandingPage() {
           <img
             src="/profile.jpg"
             alt="profile pic"
-            className="h-30 w-30 rounded-full object-cover sm:h-60 sm:w-60 lg:h-80 lg:w-80"
+            className="h-40 w-40 rounded-full object-cover shadow-md md:h-60 md:w-60 lg:h-80 lg:w-80"
           />
         </motion.div>
       </div>
       <section className="mx-auto mt-20 flex max-w-7xl flex-col items-center px-6 lg:mt-40">
-        <h2 className="w-full border-b border-black/25 text-center leading-[0.1rem] text-black/25 dark:border-white/60 dark:text-white/60">
+        <h2 className="w-full border-b border-dark-1/25 text-center leading-[0.1rem] text-dark-1/25 dark:border-light-1/60 dark:text-light-1/60">
           <span className="bg-light-1 px-4 transition-colors dark:bg-dark-1">
             My Latest Projects
           </span>

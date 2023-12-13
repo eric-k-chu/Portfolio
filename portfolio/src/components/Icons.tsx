@@ -39,13 +39,19 @@ export function LinkedInIcon({ className, onClick }: Props) {
 export function MenuIcon({ className, onClick }: Props) {
   return (
     <svg
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 40 40"
       className={className}
       onClick={onClick}
     >
-      <path d="M34.063 10.625H5.938a.938.938 0 1 1 0-1.875h28.125a.938.938 0 0 1 0 1.875m0 10.313H5.938a.938.938 0 0 1 0-1.876h28.125a.938.938 0 0 1 0 1.876m0 10.312H5.938a.938.938 0 1 1 0-1.875h28.125a.938.938 0 0 1 0 1.875" />
-      <path d="M34.063 20.938H5.938a.938.938 0 0 1 0-1.876h28.125a.938.938 0 0 1 0 1.876" />
+      <path
+        d="M3,12H21M9,18H21M3,6H15"
+        className="stroke-dark-1 stroke-2 dark:stroke-light-1"
+        style={{
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+        }}
+      />
     </svg>
   );
 }
@@ -128,7 +134,7 @@ export function ContactIcon({ className, onClick }: Props) {
 export function LogoIcon({ className, onClick }: Props) {
   return (
     <svg
-      className={className ?? "h-4 w-4 fill-black dark:fill-white/90"}
+      className={className ?? "h-4 w-4 fill-dark-1 dark:fill-light-1"}
       onClick={onClick}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
