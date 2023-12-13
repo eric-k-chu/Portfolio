@@ -54,7 +54,7 @@ export const PROJECTS: IProject[] = [
     title: "Castle",
     alt: "screenshot of Castle search results",
     imgSrc: "/castle.png",
-    desc: "A player search engine powered by the Chess.com API",
+    desc: "Chess.com API-driven player search engine",
     features: [
       {
         desc: "fdsa",

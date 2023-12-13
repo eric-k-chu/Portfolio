@@ -32,14 +32,14 @@ export function LandingPage() {
             variants={showAndHide}
           >
             <motion.a href={GITHUB} target="_blank" whileHover={{ scale: 1.1 }}>
-              <GitHubIcon className="h-6 w-6 fill-black dark:fill-white/90 lg:h-8 lg:w-8" />
+              <GitHubIcon className="h-6 w-6 fill-dark-1 dark:fill-light-1 lg:h-8 lg:w-8" />
             </motion.a>
             <motion.a
               href={LINKEDIN}
               target="_blank"
               whileHover={{ scale: 1.1 }}
             >
-              <LinkedInIcon className="h-6 w-6 fill-black dark:fill-white/90 lg:h-8 lg:w-8" />
+              <LinkedInIcon className="h-6 w-6 fill-dark-1 dark:fill-light-1 lg:h-8 lg:w-8" />
             </motion.a>
           </motion.div>
           <motion.button
@@ -47,7 +47,7 @@ export function LandingPage() {
             animate="appear"
             variants={showAndHide}
             whileHover={{ scale: 1.1 }}
-            className="mt-8 rounded-md bg-orange p-2 px-6 text-sm text-black shadow-md dark:bg-blue md:text-base lg:text-lg"
+            className="mt-8 rounded-md bg-orange p-2 px-6 text-sm text-dark-1 shadow-md dark:bg-blue md:text-base lg:text-lg"
           >
             Hire Me
           </motion.button>
@@ -66,7 +66,7 @@ export function LandingPage() {
         </motion.div>
       </div>
       <section className="mx-auto mt-20 flex max-w-7xl flex-col items-center px-6 lg:mt-40">
-        <h2 className="w-full border-b border-black/25 text-center leading-[0.1rem] text-black/25 dark:border-white/60 dark:text-white/60">
+        <h2 className="w-full border-b border-dark-1/25 text-center leading-[0.1rem] text-dark-1/25 dark:border-light-1/60 dark:text-light-1/60">
           <span className="bg-light-1 px-4 transition-colors dark:bg-dark-1">
             My Latest Projects
           </span>
