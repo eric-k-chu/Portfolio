@@ -9,10 +9,7 @@ export function AboutPage() {
       animate="appear"
       variants={showAndHide}
     >
-      <img
-        src="/Portfolio/profile.jpg"
-        className="w-60 rounded-lg shadow-md md:w-80"
-      />
+      <img src="/profile.jpg" className="w-60 rounded-lg shadow-md md:w-80" />
       <section className="flex flex-col gap-y-4">
         <h1 className="text-medium font-semibold md:text-xl">
           Hi There <span>&#128075;</span>
