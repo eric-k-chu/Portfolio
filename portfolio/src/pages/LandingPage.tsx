@@ -59,7 +59,7 @@ export function LandingPage() {
           variants={showAndHide}
         >
           <img
-            src="/profile.jpg"
+            src="/Portfolio/profile.jpg"
             alt="profile pic"
             className="h-40 w-40 rounded-full object-cover shadow-md md:h-60 md:w-60 lg:h-80 lg:w-80"
           />

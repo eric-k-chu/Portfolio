@@ -29,7 +29,7 @@ export const PROJECTS: IProject[] = [
   {
     title: "Artus",
     alt: "screenshot of Artus homepage",
-    imgSrc: "/artus.png",
+    imgSrc: "/Portfolio/artus.png",
     desc: "A full-stack video-hosting web application",
     features: [
       {
@@ -53,7 +53,7 @@ export const PROJECTS: IProject[] = [
   {
     title: "Castle",
     alt: "screenshot of Castle search results",
-    imgSrc: "/castle.png",
+    imgSrc: "/Portfolio/castle.png",
     desc: "Chess.com API-driven player search engine",
     features: [
       {
@@ -77,7 +77,7 @@ export const PROJECTS: IProject[] = [
   {
     title: "Geo Run",
     alt: "screenshot of Geo Run",
-    imgSrc: "/geo-run.png",
+    imgSrc: "/Portfolio/geo-run.png",
     desc: "An endless runner game created with Unity",
     features: [
       {
