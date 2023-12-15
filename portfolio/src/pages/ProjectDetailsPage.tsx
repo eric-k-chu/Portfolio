@@ -4,7 +4,7 @@ import { doesProjectExist } from "../lib/api";
 import { IProject, PROJECTS } from "../lib/constants";
 import { motion } from "framer-motion";
 import { showAndHide } from "../lib/animations";
-import { ProjectFeatureCard } from "../components";
+import { GitHubIcon, ProjectFeatureCard } from "../components";
 
 export function ProjectDetailsPage() {
   const [project, setProject] = useState<IProject>();
@@ -47,6 +47,9 @@ export function ProjectDetailsPage() {
           <h3 className="text-xs font-medium md:text-sm lg:text-lg">
             {project?.desc}
           </h3>
+          <a target="_blank" href={project?.github}>
+            <GitHubIcon className="h-5 w-5 fill-light-1 md:h-8 md:w-8" />
+          </a>
         </section>
       </div>
       <div className="mt-8 w-full">
