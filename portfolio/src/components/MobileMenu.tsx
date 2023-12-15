@@ -30,7 +30,7 @@ export function MobileMenu() {
         onClick={() => setIsOpen(true)}
       />
       <div
-        className={`fixed inset-0 z-10 transition duration-[300ms] ease-in-out ${
+        className={`fixed inset-0 z-30 transition duration-[300ms] ease-in-out ${
           isOpen
             ? "bg-slate-900/25 backdrop-blur-sm dark:bg-dark-1/25"
             : "pointer-events-none bg-transparent backdrop-blur-none"
