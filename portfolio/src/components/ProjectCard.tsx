@@ -14,7 +14,7 @@ export function ProjectCard({ projectInfo }: Props) {
 
   return (
     <motion.div
-      className="relative h-52 w-72 rounded-lg bg-light-3 p-4 shadow-md dark:bg-dark-2 md:h-[17rem] md:w-96"
+      className="relative h-52 w-72 rounded-lg bg-light-3 p-4 shadow-md dark:bg-dark-3 md:h-[17rem] md:w-96"
       initial="disappear"
       animate="appear"
       variants={anim.showAndHide}
