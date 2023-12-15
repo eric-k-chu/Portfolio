@@ -13,6 +13,7 @@ export const GITHUB = "https://github.com/eric-k-chu";
 export const LINKEDIN = "https://www.linkedin.com/in/eric-k-chu/";
 
 type Feature = {
+  feat: string;
   desc: string;
   imgSrc: string;
 };
@@ -33,19 +34,33 @@ export const PROJECTS: IProject[] = [
     desc: "A full-stack video-hosting web application",
     features: [
       {
-        desc: "fdsa",
+        feat: "Video Upload",
+        desc: "Users have the functionality to seamlessly upload videos to Artus.",
         imgSrc: "test",
       },
       {
-        desc: "fdsa",
+        feat: "Watching Videos",
+        desc: "Users can easily access and view a specific video.",
         imgSrc: "test",
       },
       {
-        desc: "fdsa",
+        feat: "Caption and Tags Editing",
+        desc: "Users can customize and edit the captions and tags for their uploaded videos.",
         imgSrc: "test",
       },
       {
-        desc: "fdsa",
+        feat: "Video Deletion",
+        desc: "Users can delete their own videos.",
+        imgSrc: "test",
+      },
+      {
+        feat: "Video Favoriting",
+        desc: "Users can favorite a video, which will appear in their liked videos section.",
+        imgSrc: "test",
+      },
+      {
+        feat: "Advanced Search Functionality",
+        desc: "Users can search for usernames, captions, or tags.",
         imgSrc: "test",
       },
     ],
@@ -57,19 +72,43 @@ export const PROJECTS: IProject[] = [
     desc: "Chess.com API-driven player search engine",
     features: [
       {
-        desc: "fdsa",
+        feat: "Player Search Functionality",
+        desc: "Users can search for specific player accounts in Chess.com",
         imgSrc: "test",
       },
       {
-        desc: "fdsa",
+        feat: "Public Account Information",
+        desc: "Users can access and view public information about a player's account. This includes their name, their join date, their associated flag, and much more. ",
         imgSrc: "test",
       },
       {
-        desc: "fdsa",
+        feat: "Club Membership Display",
+        desc: "Users can view the list of clubs that a player is afffiliated with.",
         imgSrc: "test",
       },
       {
-        desc: "fdsa",
+        feat: "Comprehensive Match History Exploration",
+        desc: "Users can view the list games a player has played in. The games are sorted by when their completed date.",
+        imgSrc: "test",
+      },
+      {
+        feat: "Leaderboard Access",
+        desc: "Users can view the leaderboards of the top 50 players in each game mode in Chess.com.",
+        imgSrc: "test",
+      },
+      {
+        feat: "Bookmarking",
+        desc: "Users can bookmark a specific game played by a player. Users can view their bookmarked game in the bookmark section.",
+        imgSrc: "test",
+      },
+      {
+        feat: "Daily Puzzle Display",
+        desc: "Users can view the daily puzzle of the day.",
+        imgSrc: "test",
+      },
+      {
+        feat: "Tournament Participation History",
+        desc: "Users can view the list of tournaments a player has participated in, are currently in, and will play in.",
         imgSrc: "test",
       },
     ],
@@ -81,19 +120,33 @@ export const PROJECTS: IProject[] = [
     desc: "An endless runner game created with Unity",
     features: [
       {
-        desc: "fdsa",
+        feat: "Endless Running Gameplay",
+        desc: "Geo Run is an endless runner type of game, where the player's character runs continuously through the game environment. The goal is to survive for as long as possible by avoiding obstacles.",
         imgSrc: "test",
       },
       {
-        desc: "fdsa",
+        feat: "Navigation Controls",
+        desc: "Geo Run has controls that allows the player to navigate their character. Players can move left or right to change lanes, move up to jump, and move down to fall quickly.",
         imgSrc: "test",
       },
       {
-        desc: "fdsa",
+        feat: "Obstacle Avoidance",
+        desc: "Players will encounter different obstacles during their playthrough of Geo Run. Some of these obstacles include crates and electrical fences.",
         imgSrc: "test",
       },
       {
-        desc: "fdsa",
+        feat: "Collectible Points",
+        desc: "Stars are located throughout the game environment and can be collected to further increase a player's score.",
+        imgSrc: "test",
+      },
+      {
+        feat: "Customizable Audio Settings",
+        desc: "Players can adjust the in-game volume settings to their liking.",
+        imgSrc: "test",
+      },
+      {
+        feat: "Selectable Characters",
+        desc: "Players can choose different characters to play as.",
         imgSrc: "test",
       },
     ],
