@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
-import { GITHUB, LINKEDIN, PROJECTS } from "../lib/constants";
+import { GITHUB, LINKEDIN, PROJECT_LIST } from "../lib/constants";
 import { GitHubIcon, LinkedInIcon } from "../components";
 import { showAndHide } from "../lib/animations";
+import { useNavigate } from "react-router-dom";
 
 export function LandingPage() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="mx-auto mt-20 flex max-w-7xl flex-col-reverse items-center justify-start px-6 md:mt-40 md:flex-row md:justify-evenly">
@@ -77,15 +79,20 @@ export function LandingPage() {
           animate="appear"
           variants={showAndHide}
         >
-          {PROJECTS.map((n, i) => (
-            <div className="flex flex-col items-center gap-y-4" key={i}>
-              <motion.img
+          {PROJECT_LIST.map((n, i) => (
+            <div
+              className="group relative h-60 w-60 rounded-lg shadow-md hover:cursor-pointer lg:h-80 lg:w-80"
+              key={i}
+              onClick={() => navigate(`/projects/${n.title}`)}
+            >
+              <img
                 src={n.imgSrc}
-                className="h-60 w-60 rounded-lg object-cover shadow-md hover:cursor-pointer lg:h-80 lg:w-80"
-                whileHover={{ scale: 1.05 }}
-                transition={{ ease: "easeInOut" }}
+                className="h-60 w-60 rounded-lg object-cover lg:h-80 lg:w-80"
               />
-              <h2 className="font-medium italic">{n.title}</h2>
+              <div className="absolute inset-0 w-full rounded-lg bg-transparent opacity-0 transition-all duration-[300ms] group-hover:bg-black group-hover:opacity-50" />
+              <h2 className="absolute top-[50%] w-full select-none text-center font-medium italic text-white opacity-0 transition-opacity duration-[300ms] group-hover:opacity-100">
+                {n.title}
+              </h2>
             </div>
           ))}
         </motion.div>
