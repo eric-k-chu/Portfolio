@@ -38,7 +38,7 @@ export function NavBar() {
               <Link
                 to="/projects"
                 className={`border-b hover:border-inherit ${
-                  path === "/projects"
+                  path === "/projects" || path.includes("/projects/")
                     ? "border-orange dark:border-blue"
                     : "border-transparent"
                 }`}
