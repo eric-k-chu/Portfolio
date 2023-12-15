@@ -13,8 +13,5 @@ export function writeTheme(theme: Theme): void {
 export function doesProjectExist(name: string | undefined): boolean {
   if (name === undefined) return false;
 
-  for (const project of PROJECTS) {
-    if (project.title === name) return true;
-  }
-  return false;
+  return PROJECTS[name] !== undefined;
 }

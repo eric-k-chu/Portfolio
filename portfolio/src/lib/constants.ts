@@ -26,8 +26,8 @@ export interface IProject {
   features: Feature[];
 }
 
-export const PROJECTS: IProject[] = [
-  {
+export const PROJECTS: Record<string, IProject> = {
+  Artus: {
     title: "Artus",
     alt: "screenshot of Artus homepage",
     imgSrc: `${import.meta.env.BASE_URL}artus.png`,
@@ -65,7 +65,7 @@ export const PROJECTS: IProject[] = [
       },
     ],
   },
-  {
+  Castle: {
     title: "Castle",
     alt: "screenshot of Castle search results",
     imgSrc: `${import.meta.env.BASE_URL}castle.png`,
@@ -113,7 +113,7 @@ export const PROJECTS: IProject[] = [
       },
     ],
   },
-  {
+  "Geo Run": {
     title: "Geo Run",
     alt: "screenshot of Geo Run",
     imgSrc: `${import.meta.env.BASE_URL}geo-run.png`,
@@ -151,4 +151,6 @@ export const PROJECTS: IProject[] = [
       },
     ],
   },
-];
+};
+
+export const PROJECT_LIST: IProject[] = Object.values(PROJECTS);
