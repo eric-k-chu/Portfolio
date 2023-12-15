@@ -16,7 +16,7 @@ export function ProjectDetailsPage() {
     } else {
       setProject(PROJECTS[projectName]);
     }
-  }, []);
+  }, [projectName]);
 
   if (error) {
     return (
@@ -39,9 +39,13 @@ export function ProjectDetailsPage() {
           className="mx-auto h-auto w-full rounded-lg"
         />
         <div className="absolute inset-0 rounded-lg bg-black opacity-50" />
-        <section className="absolute inset-0 z-10 flex h-full w-full flex-col items-center justify-center space-y-2 text-center">
-          <h1 className="text-4xl font-semibold">{project?.title}</h1>
-          <h3 className="text-xl font-medium">{project?.desc}</h3>
+        <section className="absolute inset-0 z-10 flex h-full w-full flex-col items-center justify-center space-y-2 text-center text-light-1">
+          <h1 className="text-lg font-semibold md:text-2xl lg:text-4xl">
+            {project?.title}
+          </h1>
+          <h3 className="text-sm font-medium md:text-base lg:text-xl">
+            {project?.desc}
+          </h3>
         </section>
       </div>
       {project?.features.map((n) => <h1 key={n.feat}>{n.feat}</h1>)}
