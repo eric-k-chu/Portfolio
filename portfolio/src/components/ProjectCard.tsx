@@ -14,13 +14,13 @@ export function ProjectCard({ projectInfo }: Props) {
 
   return (
     <motion.div
-      className="relative h-48 w-72 rounded-lg bg-light-3 p-4 shadow-md dark:bg-dark-2 md:h-64 md:w-96"
+      className="relative h-52 w-72 rounded-lg bg-light-3 p-4 shadow-md dark:bg-dark-2 md:h-[17rem] md:w-96"
       initial="disappear"
       animate="appear"
       variants={anim.showAndHide}
     >
       <img
-        className="rounded-md object-cover shadow-md hover:cursor-pointer"
+        className="rounded-md object-cover shadow-md"
         src={imgSrc}
         alt={alt}
       />
@@ -50,10 +50,12 @@ export function ProjectCard({ projectInfo }: Props) {
           </span>
         </div>
       </div>
-      <h2 className="mt-2 text-sm font-light italic text-gray md:text-base">
-        {title}
-      </h2>
-      <h3 className="mt-1 truncate text-xs font-light md:text-sm">{desc}</h3>
+      <div className="mt-2 space-y-2">
+        <h2 className="text-sm font-light italic text-gray md:text-base">
+          {title}
+        </h2>
+        <h3 className="truncate text-xs font-light md:text-sm">{desc}</h3>
+      </div>
     </motion.div>
   );
 }
