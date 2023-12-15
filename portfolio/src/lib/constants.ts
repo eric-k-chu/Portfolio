@@ -24,6 +24,7 @@ export interface IProject {
   imgSrc: string;
   desc: string;
   features: Feature[];
+  github: string;
 }
 
 export const PROJECTS: Record<string, IProject> = {
@@ -32,6 +33,7 @@ export const PROJECTS: Record<string, IProject> = {
     alt: "screenshot of Artus homepage",
     imgSrc: `${import.meta.env.BASE_URL}artus.png`,
     desc: "A full-stack video-hosting web application",
+    github: "https://github.com/eric-k-chu/Artus",
     features: [
       {
         feat: "Video Upload",
@@ -70,6 +72,7 @@ export const PROJECTS: Record<string, IProject> = {
     alt: "screenshot of Castle search results",
     imgSrc: `${import.meta.env.BASE_URL}castle.png`,
     desc: "Chess.com API-driven player search engine",
+    github: "https://github.com/eric-k-chu/Castle",
     features: [
       {
         feat: "Player Search Functionality",
@@ -118,6 +121,7 @@ export const PROJECTS: Record<string, IProject> = {
     alt: "screenshot of Geo Run",
     imgSrc: `${import.meta.env.BASE_URL}geo-run.png`,
     desc: "An endless runner game created with Unity",
+    github: "https://github.com/eric-k-chu/Geo-Run",
     features: [
       {
         feat: "Endless Running Gameplay",

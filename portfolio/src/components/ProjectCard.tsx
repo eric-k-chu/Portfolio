@@ -9,12 +9,12 @@ type Props = {
 };
 
 export function ProjectCard({ projectInfo }: Props) {
-  const { title, alt, imgSrc, desc } = projectInfo;
+  const { title, alt, imgSrc, desc, github } = projectInfo;
   const navigate = useNavigate();
 
   return (
     <motion.div
-      className="group relative h-48 w-72 rounded-lg bg-light-3 p-4 shadow-md dark:bg-dark-2 md:h-64 md:w-96"
+      className="relative h-48 w-72 rounded-lg bg-light-3 p-4 shadow-md dark:bg-dark-2 md:h-64 md:w-96"
       initial="disappear"
       animate="appear"
       variants={anim.showAndHide}
@@ -24,23 +24,31 @@ export function ProjectCard({ projectInfo }: Props) {
         src={imgSrc}
         alt={alt}
       />
-      <div className="absolute inset-0 z-10 w-full rounded-md bg-black opacity-0 transition-opacity duration-[400ms] group-hover:opacity-50" />
-      <div className="absolute inset-0 z-20 flex items-center justify-between text-light-1">
-        <h3 className="flex h-full w-1/2 items-center justify-center gap-x-2 opacity-0 transition-opacity duration-[400ms] hover:cursor-pointer hover:opacity-100">
-          <span className="select-none">GitHub</span>
-          <span>
-            <GitHubIcon className="h-4 w-4 fill-light-1" />
+      <div className="absolute inset-0 z-10 w-full rounded-md" />
+      <div className="absolute inset-0 z-20 flex items-center justify-between">
+        <a
+          className="group flex h-full w-1/2 items-center justify-center gap-x-2 rounded-l-md bg-gradient-to-l from-black/0 to-black/0 to-70% hover:cursor-pointer hover:to-black/70"
+          target="_blank"
+          href={github}
+        >
+          <span className="select-none text-light-1/0 transition-colors group-hover:text-light-1">
+            GitHub
           </span>
-        </h3>
-        <h3
-          className="flex h-full w-1/2 items-center justify-center gap-x-2 opacity-0 transition-opacity duration-[400ms] hover:cursor-pointer hover:opacity-100"
+          <span>
+            <GitHubIcon className="h-4 w-4 fill-light-1/0 transition-colors group-hover:fill-light-1" />
+          </span>
+        </a>
+        <div
+          className="group flex h-full w-1/2 items-center justify-center gap-x-2 rounded-r-md bg-gradient-to-r from-black/0 to-black/0 to-70% hover:cursor-pointer hover:to-black/70"
           onClick={() => navigate(`/projects/${title}`)}
         >
-          <span className="select-none">Read More</span>
-          <span>
-            <ExitIcon className="h-4 w-4 fill-light-1" />
+          <span className="select-none text-light-1/0 transition-colors group-hover:text-light-1">
+            Read More
           </span>
-        </h3>
+          <span>
+            <ExitIcon className="h-4 w-4 fill-light-1/0 transition-colors group-hover:fill-light-1" />
+          </span>
+        </div>
       </div>
       <h2 className="mt-2 text-sm font-light italic text-gray md:text-base">
         {title}
