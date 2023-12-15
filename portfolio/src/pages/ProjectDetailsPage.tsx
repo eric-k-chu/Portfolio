@@ -4,6 +4,7 @@ import { doesProjectExist } from "../lib/api";
 import { IProject, PROJECTS } from "../lib/constants";
 import { motion } from "framer-motion";
 import { showAndHide } from "../lib/animations";
+import { GitHubIcon, ProjectFeatureCard } from "../components";
 
 export function ProjectDetailsPage() {
   const [project, setProject] = useState<IProject>();
@@ -28,7 +29,7 @@ export function ProjectDetailsPage() {
 
   return (
     <motion.div
-      className="mx-auto mt-12 flex max-w-7xl flex-col items-center"
+      className="mx-auto mt-12 flex max-w-7xl flex-col items-center px-6"
       initial="disappear"
       animate="appear"
       variants={showAndHide}
@@ -43,12 +44,19 @@ export function ProjectDetailsPage() {
           <h1 className="text-lg font-semibold md:text-2xl lg:text-4xl">
             {project?.title}
           </h1>
-          <h3 className="text-sm font-medium md:text-base lg:text-xl">
+          <h3 className="text-xs font-medium md:text-sm lg:text-lg">
             {project?.desc}
           </h3>
+          <a target="_blank" href={project?.github}>
+            <GitHubIcon className="h-5 w-5 fill-light-1 md:h-8 md:w-8" />
+          </a>
         </section>
       </div>
-      {project?.features.map((n) => <h1 key={n.feat}>{n.feat}</h1>)}
+      <div className="mt-8 w-full">
+        {project?.features.map((n) => (
+          <ProjectFeatureCard feature={n} key={n.feat} />
+        ))}
+      </div>
     </motion.div>
   );
 }

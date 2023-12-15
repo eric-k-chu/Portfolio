@@ -4,3 +4,4 @@ export * from "./ThemeSelector";
 export * from "./ProjectCard";
 export * from "./Icons";
 export * from "./MobileMenu";
+export * from "./ProjectFeatureCard";

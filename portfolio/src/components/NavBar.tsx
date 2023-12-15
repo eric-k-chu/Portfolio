@@ -6,7 +6,7 @@ export function NavBar() {
 
   return (
     <>
-      <header className="mx-auto px-12">
+      <header className="mx-auto px-8">
         <div className="py-6">
           <div className="flex justify-between">
             <div className="flex items-center gap-x-2">
@@ -38,7 +38,7 @@ export function NavBar() {
               <Link
                 to="/projects"
                 className={`border-b hover:border-inherit ${
-                  path === "/projects"
+                  path === "/projects" || path.includes("/projects/")
                     ? "border-orange dark:border-blue"
                     : "border-transparent"
                 }`}
