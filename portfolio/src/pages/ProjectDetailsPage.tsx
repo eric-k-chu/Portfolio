@@ -44,6 +44,7 @@ export function ProjectDetailsPage() {
           <h3 className="text-xl font-medium">{project?.desc}</h3>
         </section>
       </div>
+      {project?.features.map((n) => <h1 key={n.feat}>{n.feat}</h1>)}
     </motion.div>
   );
 }
