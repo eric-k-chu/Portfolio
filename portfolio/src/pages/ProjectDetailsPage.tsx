@@ -4,6 +4,7 @@ import { doesProjectExist } from "../lib/api";
 import { IProject, PROJECTS } from "../lib/constants";
 import { motion } from "framer-motion";
 import { showAndHide } from "../lib/animations";
+import { ProjectFeatureCard } from "../components";
 
 export function ProjectDetailsPage() {
   const [project, setProject] = useState<IProject>();
@@ -48,7 +49,11 @@ export function ProjectDetailsPage() {
           </h3>
         </section>
       </div>
-      {project?.features.map((n) => <h1 key={n.feat}>{n.feat}</h1>)}
+      <div className="mt-8 w-full">
+        {project?.features.map((n) => (
+          <ProjectFeatureCard feature={n} key={n.feat} />
+        ))}
+      </div>
     </motion.div>
   );
 }

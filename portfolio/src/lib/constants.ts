@@ -12,7 +12,7 @@ export const GITHUB = "https://github.com/eric-k-chu";
 
 export const LINKEDIN = "https://www.linkedin.com/in/eric-k-chu/";
 
-type Feature = {
+export type Feature = {
   feat: string;
   desc: string;
   imgSrc: string;
@@ -37,7 +37,7 @@ export const PROJECTS: Record<string, IProject> = {
     features: [
       {
         feat: "Video Upload",
-        desc: "Users have the functionality to seamlessly upload videos to Artus.",
+        desc: "Users can upload videos up to a max size of 5 megabytes.",
         imgSrc: "test",
       },
       {
