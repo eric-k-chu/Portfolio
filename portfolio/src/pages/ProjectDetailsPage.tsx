@@ -37,17 +37,17 @@ export function ProjectDetailsPage() {
       <div className="relative w-full rounded-lg">
         <img
           src={project?.imgSrc}
-          className="mx-auto h-auto w-full rounded-lg"
+          className="mx-auto h-full w-full rounded-lg"
         />
         <div className="absolute inset-0 rounded-lg bg-black opacity-50" />
-        <section className="absolute inset-0 z-10 flex h-full w-full flex-col items-center justify-center gap-y-2 text-center text-light-1">
+        <section className="absolute inset-0 z-10 flex h-full w-full flex-col items-center justify-center gap-y-2 text-light-1">
           <h1 className="text-lg font-semibold md:text-2xl lg:text-4xl">
             {project?.title}
           </h1>
           <h3 className="text-xs font-medium md:text-sm lg:text-lg">
             {project?.desc}
           </h3>
-          <div className="flex items-center justify-center gap-x-4">
+          <div className="flex items-center justify-center gap-x-4 pt-4">
             <a target="_blank" href={project?.github}>
               <GitHubIcon className="h-5 w-5 fill-light-1 md:h-8 md:w-8" />
             </a>

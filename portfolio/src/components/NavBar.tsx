@@ -61,13 +61,13 @@ export function NavBar() {
       <footer className="mx-auto mt-auto flex h-96 w-full flex-col items-center bg-black p-8 text-light-1 md:flex-row md:justify-around">
         <div className="flex h-full w-full flex-col justify-center gap-y-6 md:w-1/4">
           <h1 className="text-base font-semibold underline underline-offset-4 md:text-lg">
-            Contact
+            CONTACT
           </h1>
           <h2 className="text-sm md:text-base">{EMAIL}</h2>
         </div>
         <div className="flex h-full w-full flex-col justify-center gap-y-6 md:w-1/4">
           <h1 className="text-base font-semibold underline underline-offset-4 md:text-lg">
-            Socials
+            SOCIALS
           </h1>
           <div className="flex items-center gap-x-4">
             <a target="_blank" href={GITHUB}>

@@ -1,5 +1,7 @@
 import { PROJECT_LIST } from "../lib/constants";
 import { ProjectCard, ProjectIcon } from "../components";
+import { motion } from "framer-motion";
+import { showAndHide } from "../lib/animations";
 
 export function ProjectsPage() {
   return (
@@ -10,11 +12,16 @@ export function ProjectsPage() {
           PROJECTS
         </h1>
       </div>
-      <div className="flex w-full flex-wrap items-center justify-center gap-8">
+      <motion.div
+        className="flex w-full flex-wrap items-center justify-center gap-8"
+        initial="disappear"
+        animate="appear"
+        variants={showAndHide}
+      >
         {PROJECT_LIST.map((n, i) => (
           <ProjectCard projectInfo={n} key={i} />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

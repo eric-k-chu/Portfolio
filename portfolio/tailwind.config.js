@@ -7,7 +7,7 @@ export default {
         "light-1": "#E8E8E8",
         "light-2": "#F0F0F0",
         "light-3": "#FFFFFF",
-        "dark-1": "#131217",
+        "dark-1": "#121212",
         "dark-2": "#232323",
         "dark-3": "#1E1E1E",
         "light-b": "#E2E8F0",
