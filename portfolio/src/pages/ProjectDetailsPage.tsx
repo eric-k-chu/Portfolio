@@ -4,7 +4,7 @@ import { doesProjectExist } from "../lib/api";
 import { IProject, PROJECTS } from "../lib/constants";
 import { motion } from "framer-motion";
 import { showAndHide } from "../lib/animations";
-import { GitHubIcon, ProjectFeatureCard } from "../components";
+import { GitHubIcon, LinkIcon, ProjectFeatureCard } from "../components";
 
 export function ProjectDetailsPage() {
   const [project, setProject] = useState<IProject>();
@@ -29,7 +29,7 @@ export function ProjectDetailsPage() {
 
   return (
     <motion.div
-      className="mx-auto mt-12 flex max-w-7xl flex-col items-center px-6"
+      className="mx-auto mb-96 mt-12 flex max-w-7xl flex-col items-center px-6"
       initial="disappear"
       animate="appear"
       variants={showAndHide}
@@ -40,16 +40,23 @@ export function ProjectDetailsPage() {
           className="mx-auto h-auto w-full rounded-lg"
         />
         <div className="absolute inset-0 rounded-lg bg-black opacity-50" />
-        <section className="absolute inset-0 z-10 flex h-full w-full flex-col items-center justify-center space-y-2 text-center text-light-1">
+        <section className="absolute inset-0 z-10 flex h-full w-full flex-col items-center justify-center gap-y-2 text-center text-light-1">
           <h1 className="text-lg font-semibold md:text-2xl lg:text-4xl">
             {project?.title}
           </h1>
           <h3 className="text-xs font-medium md:text-sm lg:text-lg">
             {project?.desc}
           </h3>
-          <a target="_blank" href={project?.github}>
-            <GitHubIcon className="h-5 w-5 fill-light-1 md:h-8 md:w-8" />
-          </a>
+          <div className="flex items-center justify-center gap-x-4">
+            <a target="_blank" href={project?.github}>
+              <GitHubIcon className="h-5 w-5 fill-light-1 md:h-8 md:w-8" />
+            </a>
+            {project?.live && (
+              <a target="_blank" href={project?.live}>
+                <LinkIcon className="h-5 w-5 fill-light-1 md:h-8 md:w-8" />
+              </a>
+            )}
+          </div>
         </section>
       </div>
       <div className="mt-8 w-full">

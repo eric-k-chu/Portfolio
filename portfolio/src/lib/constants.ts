@@ -12,6 +12,8 @@ export const GITHUB = "https://github.com/eric-k-chu";
 
 export const LINKEDIN = "https://www.linkedin.com/in/eric-k-chu/";
 
+export const EMAIL = "kiyuen88ec@gmail.com";
+
 export type Feature = {
   feat: string;
   desc: string;
@@ -25,6 +27,7 @@ export interface IProject {
   desc: string;
   features: Feature[];
   github: string;
+  live?: string;
 }
 
 export const PROJECTS: Record<string, IProject> = {
@@ -34,9 +37,10 @@ export const PROJECTS: Record<string, IProject> = {
     imgSrc: `${import.meta.env.BASE_URL}artus.png`,
     desc: "A full-stack video-hosting web application",
     github: "https://github.com/eric-k-chu/Artus",
+    live: "http://artus-dev.us-west-1.elasticbeanstalk.com/",
     features: [
       {
-        feat: "Video Upload",
+        feat: "Uploading Videos",
         desc: "Users can upload videos up to a max size of 5 megabytes.",
         imgSrc: "test",
       },
@@ -46,22 +50,22 @@ export const PROJECTS: Record<string, IProject> = {
         imgSrc: "test",
       },
       {
-        feat: "Caption and Tags Editing",
+        feat: "Editing Video Caption and Tags",
         desc: "Users can customize and edit the captions and tags for their uploaded videos.",
         imgSrc: "test",
       },
       {
-        feat: "Video Deletion",
+        feat: "Deleting Videos",
         desc: "Users can delete their own videos.",
         imgSrc: "test",
       },
       {
-        feat: "Video Favoriting",
+        feat: "Liking a video",
         desc: "Users can favorite a video, which will appear in their liked videos section.",
         imgSrc: "test",
       },
       {
-        feat: "Advanced Search Functionality",
+        feat: "Search Functionality",
         desc: "Users can search for usernames, captions, or tags.",
         imgSrc: "test",
       },
@@ -73,6 +77,7 @@ export const PROJECTS: Record<string, IProject> = {
     imgSrc: `${import.meta.env.BASE_URL}castle.png`,
     desc: "Chess.com API-driven player search engine",
     github: "https://github.com/eric-k-chu/Castle",
+    live: "https://eric-k-chu.github.io/Castle/",
     features: [
       {
         feat: "Player Search Functionality",
@@ -110,7 +115,7 @@ export const PROJECTS: Record<string, IProject> = {
         imgSrc: "test",
       },
       {
-        feat: "Tournament Participation History",
+        feat: "Tournament History",
         desc: "Users can view the list of tournaments a player has participated in, are currently in, and will play in.",
         imgSrc: "test",
       },
@@ -119,9 +124,10 @@ export const PROJECTS: Record<string, IProject> = {
   "Geo Run": {
     title: "Geo Run",
     alt: "screenshot of Geo Run",
-    imgSrc: `${import.meta.env.BASE_URL}geo-run.png`,
+    imgSrc: `${import.meta.env.BASE_URL}georun.PNG`,
     desc: "An endless runner game created with Unity",
     github: "https://github.com/eric-k-chu/Geo-Run",
+    live: "https://eric-k-chu.github.io/Geo-Run-Host/",
     features: [
       {
         feat: "Endless Running Gameplay",
