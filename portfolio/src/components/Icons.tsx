@@ -170,3 +170,25 @@ export function LinkIcon({ className, onClick }: Props) {
     </svg>
   );
 }
+
+export function UpIcon({ className, onClick }: Props) {
+  return (
+    <svg
+      viewBox="0 0 30 30"
+      className={className}
+      onClick={onClick}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        data-name="Path 213"
+        d="M15 0a15 15 0 1 0 15 15A15.007 15.007 0 0 0 15 0Zm0 2A13 13 0 1 1 2 15 13.006 13.006 0 0 1 15 2Z"
+        fill-rule="evenodd"
+      />
+      <path
+        data-name="Path 214"
+        d="M9.707 18.707 15 13.414l5.293 5.293a1 1 0 1 0 1.414-1.414l-6-6a1 1 0 0 0-1.414 0l-6 6a1 1 0 0 0 1.414 1.414Z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  );
+}

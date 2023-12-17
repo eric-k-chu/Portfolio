@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { doesProjectExist } from "../lib/api";
 import { IProject, PROJECTS } from "../lib/constants";
 import { motion } from "framer-motion";
 import { showAndHide } from "../lib/animations";
-import { GitHubIcon, LinkIcon, ProjectFeatureCard } from "../components";
+import {
+  GitHubIcon,
+  LinkIcon,
+  ProjectFeatureCard,
+  UpIcon,
+} from "../components";
 
 export function ProjectDetailsPage() {
   const [project, setProject] = useState<IProject>();
   const [error, setError] = useState<Error>();
   const { projectName } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!doesProjectExist(projectName) || projectName === undefined) {
@@ -29,11 +35,21 @@ export function ProjectDetailsPage() {
 
   return (
     <motion.div
-      className="mx-auto mb-96 mt-12 flex max-w-7xl flex-col items-center px-6"
+      className="mx-auto mt-12 flex max-w-7xl flex-col items-center px-6"
       initial="disappear"
       animate="appear"
       variants={showAndHide}
     >
+      <div className="mb-4 flex w-full items-center gap-x-2 font-semibold">
+        <h3
+          className="inline-block select-none hover:cursor-pointer hover:bg-gradient-to-r hover:from-orange hover:to-blue hover:bg-clip-text hover:text-transparent"
+          onClick={() => navigate("/projects")}
+        >
+          PROJECTS
+        </h3>
+        <span>/</span>
+        <span>{project?.title}</span>
+      </div>
       <div className="relative w-full rounded-lg">
         <img
           src={project?.imgSrc}
@@ -63,6 +79,12 @@ export function ProjectDetailsPage() {
         {project?.features.map((n) => (
           <ProjectFeatureCard feature={n} key={n.feat} />
         ))}
+      </div>
+      <div className="flex h-96 w-full flex-col items-center justify-center gap-y-4">
+        <button onClick={() => (document.documentElement.scrollTop = 0)}>
+          <UpIcon className="h-8 w-8 fill-dark-1 dark:fill-light-1" />
+        </button>
+        <h4>BACK TO TOP</h4>
       </div>
     </motion.div>
   );
