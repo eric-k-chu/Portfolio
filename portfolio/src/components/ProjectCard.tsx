@@ -25,7 +25,7 @@ export function ProjectCard({ projectInfo }: Props) {
 
         <div className="space-y-2 rounded-b-md px-4 py-2 shadow-md group-hover:shadow-lg">
           <h2 className="text-sm font-semibold md:text-base">{title}</h2>
-          <h3 className="truncate text-xs font-light italic text-gray md:text-sm">
+          <h3 className="flex items-center truncate text-xs font-light italic text-gray md:text-sm">
             {desc}
           </h3>
         </div>

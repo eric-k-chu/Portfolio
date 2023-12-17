@@ -28,6 +28,7 @@ export interface IProject {
   features: Feature[];
   github: string;
   live?: string;
+  tags?: string[];
 }
 
 export const PROJECTS: Record<string, IProject> = {
@@ -69,6 +70,14 @@ export const PROJECTS: Record<string, IProject> = {
         desc: "Users can search for usernames, captions, or tags.",
         imgSrc: "test",
       },
+    ],
+    tags: [
+      "React",
+      "TypeScript",
+      "Express.js",
+      "Node.js",
+      "PostgreSQL",
+      "TailwindCSS",
     ],
   },
   Castle: {
@@ -120,6 +129,7 @@ export const PROJECTS: Record<string, IProject> = {
         imgSrc: "test",
       },
     ],
+    tags: ["JavaScript", "AJAX", "HTML5", "CSS3"],
   },
   "Geo Run": {
     title: "Geo Run",
@@ -160,6 +170,7 @@ export const PROJECTS: Record<string, IProject> = {
         imgSrc: "test",
       },
     ],
+    tags: ["Unity3D", "Blender", "C#"],
   },
 };
 
