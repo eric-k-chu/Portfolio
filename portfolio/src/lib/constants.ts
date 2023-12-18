@@ -21,6 +21,7 @@ export type Feature = {
 };
 
 export interface IProject {
+  key: string;
   title: string;
   alt: string;
   imgSrc: string;
@@ -32,7 +33,8 @@ export interface IProject {
 }
 
 export const PROJECTS: Record<string, IProject> = {
-  Artus: {
+  artus: {
+    key: "artus",
     title: "Artus",
     alt: "screenshot of Artus homepage",
     imgSrc: `${import.meta.env.BASE_URL}artus/artus.png`,
@@ -80,7 +82,8 @@ export const PROJECTS: Record<string, IProject> = {
       "TailwindCSS",
     ],
   },
-  Castle: {
+  castle: {
+    key: "castle",
     title: "Castle",
     alt: "screenshot of Castle search results",
     imgSrc: `${import.meta.env.BASE_URL}castle/castle.png`,
@@ -131,10 +134,11 @@ export const PROJECTS: Record<string, IProject> = {
     ],
     tags: ["JavaScript", "AJAX", "HTML5", "CSS3"],
   },
-  "Geo Run": {
+  "geo-run": {
+    key: "geo-run",
     title: "Geo Run",
     alt: "screenshot of Geo Run",
-    imgSrc: `${import.meta.env.BASE_URL}georun/georun.PNG`,
+    imgSrc: `${import.meta.env.BASE_URL}geo_run/geo-run.PNG`,
     desc: "An endless runner game created with Unity",
     github: "https://github.com/eric-k-chu/Geo-Run",
     live: "https://eric-k-chu.github.io/Geo-Run-Host/",
@@ -142,32 +146,68 @@ export const PROJECTS: Record<string, IProject> = {
       {
         feat: "Endless Running Gameplay",
         desc: "Geo Run is an endless runner type of game, where the player's character runs continuously through the game environment. The goal is to survive for as long as possible by avoiding obstacles.",
-        imgSrc: `${import.meta.env.BASE_URL}georun/gameplay.PNG`,
+        imgSrc: `${import.meta.env.BASE_URL}geo_run/gameplay.PNG`,
       },
       {
         feat: "Navigation Controls",
         desc: "Geo Run has controls that allows the player to navigate their character. Players can move left or right to change lanes, move up to jump, and move down to fall quickly.",
-        imgSrc: `${import.meta.env.BASE_URL}georun/navigation.gif`,
+        imgSrc: `${import.meta.env.BASE_URL}geo_run/navigation.gif`,
       },
       {
         feat: "Obstacle Avoidance",
         desc: "Players will encounter different obstacles during their playthrough of Geo Run. Some of these obstacles include crates and electrical fences.",
-        imgSrc: `${import.meta.env.BASE_URL}georun/obstacles.gif`,
+        imgSrc: `${import.meta.env.BASE_URL}geo_run/obstacles.gif`,
       },
       {
         feat: "Collectible Points",
         desc: "Stars are located throughout the game environment and can be collected to further increase a player's score.",
-        imgSrc: `${import.meta.env.BASE_URL}georun/points.gif`,
+        imgSrc: `${import.meta.env.BASE_URL}geo_run/points.gif`,
       },
       {
         feat: "Customizable Audio Settings",
         desc: "Players can adjust the in-game volume settings to their liking.",
-        imgSrc: `${import.meta.env.BASE_URL}georun/audio.PNG`,
+        imgSrc: `${import.meta.env.BASE_URL}geo_run/audio.PNG`,
       },
       {
         feat: "Selectable Characters",
         desc: "Players can choose different characters to play as.",
-        imgSrc: `${import.meta.env.BASE_URL}georun/characters.PNG`,
+        imgSrc: `${import.meta.env.BASE_URL}geo_run/characters.PNG`,
+      },
+    ],
+    tags: ["Unity3D", "Blender", "C#"],
+  },
+  "project-s": {
+    key: "project-s",
+    title: "Project S",
+    alt: "screenshot of Project S",
+    imgSrc: `${import.meta.env.BASE_URL}project_s/project-s.PNG`,
+    desc: "A 2.5D action platformer built in Unity",
+    github: "https://github.com/eric-k-chu/Project-S",
+    features: [
+      {
+        feat: "Navigation Controls",
+        desc: "Project S has controls that allows the player to navigate their character. Players can move left, right, jump, and dash",
+        imgSrc: `${import.meta.env.BASE_URL}project_s/move.gif`,
+      },
+      {
+        feat: "Offensive Controls",
+        desc: "Project S has controls that allows the player to attack with their character.",
+        imgSrc: `${import.meta.env.BASE_URL}project_s/attack.gif`,
+      },
+      {
+        feat: "2.5D Level Environment",
+        desc: "Project S takes place in a dystopian world. The player needs to traverse through the environment to escape.",
+        imgSrc: `${import.meta.env.BASE_URL}project_s/environment.PNG`,
+      },
+      {
+        feat: "Enemies",
+        desc: "Project S has different types of enemies to interact with. These include robots, traps, and a boss.",
+        imgSrc: `${import.meta.env.BASE_URL}project_s/enemies.gif`,
+      },
+      {
+        feat: "Volume Settings",
+        desc: "Players can adjust the volume.",
+        imgSrc: `${import.meta.env.BASE_URL}project_s/volume.PNG`,
       },
     ],
     tags: ["Unity3D", "Blender", "C#"],

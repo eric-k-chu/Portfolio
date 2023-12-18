@@ -82,11 +82,11 @@ export function LandingPage() {
           animate="appear"
           variants={showAndHide}
         >
-          {PROJECT_LIST.map((n, i) => (
+          {PROJECT_LIST.slice(0, 3).map((n) => (
             <div
               className="group relative h-60 w-60 rounded-lg shadow-md hover:cursor-pointer lg:h-80 lg:w-80"
-              key={i}
-              onClick={() => navigate(`/projects/${n.title}`)}
+              key={n.key}
+              onClick={() => navigate(`/projects/${n.key}`)}
             >
               <img
                 src={n.imgSrc}

@@ -18,8 +18,8 @@ export function ProjectsPage() {
         animate="appear"
         variants={showAndHide}
       >
-        {PROJECT_LIST.map((n, i) => (
-          <ProjectCard projectInfo={n} key={i} />
+        {PROJECT_LIST.map((n) => (
+          <ProjectCard projectInfo={n} key={n.key} />
         ))}
       </motion.div>
     </div>
