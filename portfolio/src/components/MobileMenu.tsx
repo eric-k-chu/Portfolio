@@ -52,7 +52,7 @@ export function MobileMenu() {
             </section>
             <button
               onClick={() => handleNavigate("/")}
-              className="dark:hover:bg-cm-gray my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10"
+              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10 dark:hover:bg-dark-2"
             >
               <HomeIcon
                 className={`h-4 w-4 ${
@@ -65,7 +65,7 @@ export function MobileMenu() {
             </button>
             <button
               onClick={() => handleNavigate("/about")}
-              className="dark:hover:bg-cm-gray my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10"
+              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10 dark:hover:bg-dark-2"
             >
               <AboutIcon
                 className={`h-4 w-4 ${
@@ -78,7 +78,7 @@ export function MobileMenu() {
             </button>
             <button
               onClick={() => handleNavigate("/projects")}
-              className="dark:hover:bg-cm-gray my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10"
+              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10 dark:hover:bg-dark-2"
             >
               <ProjectIcon
                 className={`h-4 w-4 ${
@@ -91,7 +91,7 @@ export function MobileMenu() {
             </button>
             <button
               onClick={() => handleNavigate("/contact")}
-              className="dark:hover:bg-cm-gray my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10"
+              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10 dark:hover:bg-dark-2"
             >
               <ContactIcon
                 className={`h-4 w-4 ${

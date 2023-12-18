@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { showAndHide } from "../lib/animations";
@@ -25,14 +25,16 @@ export function ContactPage() {
         templateParams,
         "stFRVzVYtVUylpgKP",
       )
-      .then((res) => {
-        alert(`Email sent successfully! ${res}`);
+      .then(() => {
+        alert("Email sent successfully!");
         setName("");
         setEmail("");
         setMessage("");
       })
       .catch((err) =>
-        alert(`An unexpected error occured with sending the email: ${err}`),
+        alert(
+          `An unexpected error occured with sending the email: ${err.message}`,
+        ),
       );
   }
 
@@ -62,7 +64,7 @@ export function ContactPage() {
               id="name"
               value={name}
               onChange={(e) => setName(e.currentTarget.value)}
-              className="dark:border-cm-gray border-gray-400 dark:border-cm-gray block w-full rounded-md border bg-light-1 py-1.5 shadow-md shadow-light-s dark:bg-dark-2"
+              className="dark:border-cm-gray border-gray-300 dark:border-cm-gray block w-full rounded-md border bg-light-1 px-2 py-1.5 shadow-md shadow-light-s dark:bg-dark-2"
               type="text"
             />
           </div>
@@ -79,7 +81,7 @@ export function ContactPage() {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.currentTarget.value)}
-              className="dark:border-cm-gray border-gray-400 dark:border-cm-gray block w-full rounded-md border bg-light-1 py-1.5 shadow-md shadow-light-s dark:bg-dark-2"
+              className="dark:border-cm-gray border-gray-300 dark:border-cm-gray block w-full rounded-md border bg-light-1 px-2 py-1.5 shadow-md shadow-light-s dark:bg-dark-2"
               type="email"
             />
           </div>
@@ -97,7 +99,7 @@ export function ContactPage() {
               value={message}
               rows={10}
               onChange={(e) => setMessage(e.currentTarget.value)}
-              className="dark:border-cm-gray border-gray-400 block w-full resize-none rounded-md border bg-light-1 py-1.5 shadow-md shadow-light-s dark:bg-dark-2"
+              className="dark:border-cm-gray border-gray-300 block w-full resize-none rounded-md border bg-light-1 px-2 py-1.5 shadow-md shadow-light-s dark:bg-dark-2"
             />
           </div>
         </div>
