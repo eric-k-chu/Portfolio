@@ -8,10 +8,6 @@ export function ContactPage() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  console.log(import.meta.env.VITE_SERVICE_ID);
-  console.log(import.meta.env.VITE_TEMPLATE_ID);
-  console.log(import.meta.env.VITE_PUBLIC_KEY);
-
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -24,10 +20,10 @@ export function ContactPage() {
 
     emailjs
       .send(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
+        "service_tpqf9v3",
+        "template_qkgbvo7",
         templateParams,
-        import.meta.env.VITE_PUBLIC_KEY,
+        "stFRVzVYtVUylpgKP",
       )
       .then((res) => {
         alert(`Email sent successfully! ${res}`);
