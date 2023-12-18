@@ -1,2 +1,2 @@
 # Portfolio
-Personal Portfolio Website with React, Tailwind, and Framer Motion
+Personal Portfolio Website with React, Tailwind, Framer Motion, and EmailJS
