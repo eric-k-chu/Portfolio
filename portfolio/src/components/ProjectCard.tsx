@@ -1,61 +1,35 @@
 import { IProject } from "../lib/constants";
-import { motion } from "framer-motion";
-import * as anim from "../lib/animations";
 import { useNavigate } from "react-router-dom";
-import { ExitIcon, GitHubIcon } from ".";
 
 type Props = {
   projectInfo: IProject;
 };
 
 export function ProjectCard({ projectInfo }: Props) {
-  const { title, alt, imgSrc, desc, github } = projectInfo;
+  const { key, title, alt, imgSrc, desc } = projectInfo;
   const navigate = useNavigate();
 
   return (
-    <motion.div
-      className="relative h-52 w-72 rounded-lg bg-light-3 p-4 shadow-md dark:bg-dark-3 md:h-[17rem] md:w-96"
-      initial="disappear"
-      animate="appear"
-      variants={anim.showAndHide}
-    >
-      <img
-        className="rounded-md object-cover shadow-md"
-        src={imgSrc}
-        alt={alt}
-      />
-      <div className="absolute inset-0 z-10 w-full rounded-md" />
-      <div className="absolute inset-0 z-20 flex items-center justify-between">
-        <a
-          className="group flex h-full w-1/2 items-center justify-center gap-x-2 rounded-l-md bg-gradient-to-l from-black/0 to-black/0 to-70% hover:cursor-pointer hover:to-black/70"
-          target="_blank"
-          href={github}
-        >
-          <span className="select-none text-light-1/0 transition-colors group-hover:text-light-1">
-            GitHub
-          </span>
-          <span>
-            <GitHubIcon className="h-4 w-4 fill-light-1/0 transition-colors group-hover:fill-light-1" />
-          </span>
-        </a>
-        <div
-          className="group flex h-full w-1/2 items-center justify-center gap-x-2 rounded-r-md bg-gradient-to-r from-black/0 to-black/0 to-70% hover:cursor-pointer hover:to-black/70"
-          onClick={() => navigate(`/projects/${title}`)}
-        >
-          <span className="select-none text-light-1/0 transition-colors group-hover:text-light-1">
-            Read More
-          </span>
-          <span>
-            <ExitIcon className="h-4 w-4 fill-light-1/0 transition-colors group-hover:fill-light-1" />
-          </span>
+    <div className="group flex h-52 w-72 translate-y-0 items-center justify-center rounded-lg bg-transparent p-[2px] transition-all hover:-translate-y-0.5 hover:cursor-pointer hover:bg-gradient-to-r hover:from-orange hover:to-blue md:h-[17rem] md:w-96">
+      <div
+        className="h-full w-full rounded-lg bg-light-1 dark:bg-dark-2"
+        onClick={() => navigate(`/projects/${key}`)}
+      >
+        <div className="flex h-3/4 w-full items-center justify-center">
+          <img
+            className="h-full w-full rounded-t-md object-cover"
+            src={imgSrc}
+            alt={alt}
+          />
+        </div>
+
+        <div className="space-y-2 rounded-b-md px-4 py-2 shadow-md group-hover:shadow-lg">
+          <h2 className="text-sm font-semibold md:text-base">{title}</h2>
+          <h3 className="flex items-center truncate text-xs font-light italic text-gray md:text-sm">
+            {desc}
+          </h3>
         </div>
       </div>
-      <div className="mt-2 space-y-2">
-        <h2 className="text-sm font-light italic text-gray md:text-base">
-          {title}
-        </h2>
-        <h3 className="truncate text-xs font-light md:text-sm">{desc}</h3>
-      </div>
-    </motion.div>
+    </div>
   );
 }

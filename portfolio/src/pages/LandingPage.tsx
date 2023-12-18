@@ -24,8 +24,11 @@ export function LandingPage() {
             animate="appear"
             variants={showAndHide}
           >
-            A <span className="text-orange dark:text-blue">Full-Stack</span> Web
-            Developer
+            A{" "}
+            <span className="bg-gradient-to-r from-orange to-blue bg-clip-text font-semibold text-transparent">
+              Full-Stack
+            </span>{" "}
+            Web Developer
           </motion.h3>
           <motion.div
             className="mt-8 flex items-center gap-x-4"
@@ -49,7 +52,7 @@ export function LandingPage() {
             animate="appear"
             variants={showAndHide}
             whileHover={{ scale: 1.1 }}
-            className="mt-8 rounded-md bg-orange p-2 px-6 text-sm text-dark-1 shadow-md dark:bg-blue md:text-base lg:text-lg"
+            className="mt-8 rounded-md bg-gradient-to-r from-orange to-blue p-2 px-6 text-sm text-dark-1 shadow-md md:text-base lg:text-lg"
           >
             Hire Me
           </motion.button>
@@ -67,7 +70,7 @@ export function LandingPage() {
           />
         </motion.div>
       </div>
-      <section className="mx-auto mt-20 flex max-w-7xl flex-col items-center px-6 lg:mt-40">
+      <section className="mx-auto mb-96 mt-20 flex max-w-7xl flex-col items-center px-6 lg:mt-40">
         <h2 className="w-full border-b border-dark-1/25 text-center leading-[0.1rem] text-dark-1/25 dark:border-light-1/60 dark:text-light-1/60">
           <span className="bg-light-1 px-4 transition-colors dark:bg-dark-1">
             My Latest Projects
@@ -79,11 +82,11 @@ export function LandingPage() {
           animate="appear"
           variants={showAndHide}
         >
-          {PROJECT_LIST.map((n, i) => (
+          {PROJECT_LIST.slice(0, 3).map((n) => (
             <div
               className="group relative h-60 w-60 rounded-lg shadow-md hover:cursor-pointer lg:h-80 lg:w-80"
-              key={i}
-              onClick={() => navigate(`/projects/${n.title}`)}
+              key={n.key}
+              onClick={() => navigate(`/projects/${n.key}`)}
             >
               <img
                 src={n.imgSrc}
@@ -97,7 +100,6 @@ export function LandingPage() {
           ))}
         </motion.div>
       </section>
-      <div className="h-20" />
     </>
   );
 }

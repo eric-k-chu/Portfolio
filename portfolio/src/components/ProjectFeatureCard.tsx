@@ -14,7 +14,10 @@ export function ProjectFeatureCard({ feature }: Props) {
         whileInView={{ opacity: 1 }}
       >
         {/*img placeholder*/}
-        <motion.div className="h-full w-full rounded-md bg-black shadow-sm" />
+        <img
+          className="h-full w-full rounded-md object-cover shadow-sm"
+          src={feature.imgSrc}
+        />
       </motion.div>
       <motion.div
         className="flex w-full flex-col gap-y-4 p-2 md:w-1/2 md:gap-y-8"

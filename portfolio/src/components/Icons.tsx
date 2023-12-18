@@ -157,3 +157,38 @@ export function NotFound404Icon({ className, onClick }: Props) {
     </svg>
   );
 }
+
+export function LinkIcon({ className, onClick }: Props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      onClick={onClick}
+    >
+      <path d="m10 17.55-1.77 1.72a2.47 2.47 0 0 1-3.5-3.5l4.54-4.55a2.46 2.46 0 0 1 3.39-.09l.12.1a1 1 0 0 0 1.4-1.43 2.75 2.75 0 0 0-.18-.21 4.46 4.46 0 0 0-6.09.22l-4.6 4.55a4.48 4.48 0 0 0 6.33 6.33L11.37 19A1 1 0 0 0 10 17.55ZM20.69 3.31a4.49 4.49 0 0 0-6.33 0L12.63 5A1 1 0 0 0 14 6.45l1.73-1.72a2.47 2.47 0 0 1 3.5 3.5l-4.54 4.55a2.46 2.46 0 0 1-3.39.09l-.12-.1a1 1 0 0 0-1.4 1.43 2.75 2.75 0 0 0 .23.21 4.47 4.47 0 0 0 6.09-.22l4.55-4.55a4.49 4.49 0 0 0 .04-6.33Z" />
+    </svg>
+  );
+}
+
+export function UpIcon({ className, onClick }: Props) {
+  return (
+    <svg
+      viewBox="0 0 30 30"
+      className={className}
+      onClick={onClick}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        data-name="Path 213"
+        d="M15 0a15 15 0 1 0 15 15A15.007 15.007 0 0 0 15 0Zm0 2A13 13 0 1 1 2 15 13.006 13.006 0 0 1 15 2Z"
+        fill-rule="evenodd"
+      />
+      <path
+        data-name="Path 214"
+        d="M9.707 18.707 15 13.414l5.293 5.293a1 1 0 1 0 1.414-1.414l-6-6a1 1 0 0 0-1.414 0l-6 6a1 1 0 0 0 1.414 1.414Z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  );
+}
