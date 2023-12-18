@@ -26,7 +26,7 @@ export function NavBar() {
                 to="/"
                 className={`border-b hover:border-inherit ${
                   path === "/"
-                    ? "border-orange dark:border-blue"
+                    ? "dark:border-cm-blue border-cm-orange"
                     : "border-transparent"
                 }`}
               >
@@ -36,7 +36,7 @@ export function NavBar() {
                 to="/about"
                 className={`border-b hover:border-inherit ${
                   path === "/about"
-                    ? "border-orange dark:border-blue"
+                    ? "dark:border-cm-blue border-cm-orange"
                     : "border-transparent"
                 }`}
               >
@@ -46,11 +46,21 @@ export function NavBar() {
                 to="/projects"
                 className={`border-b hover:border-inherit ${
                   path === "/projects" || path.includes("/projects/")
-                    ? "border-orange dark:border-blue"
+                    ? "dark:border-cm-blue border-cm-orange"
                     : "border-transparent"
                 }`}
               >
                 PROJECTS
+              </Link>
+              <Link
+                to="/contact"
+                className={`border-b hover:border-inherit ${
+                  path === "/contact"
+                    ? "dark:border-cm-blue border-cm-orange"
+                    : "border-transparent"
+                }`}
+              >
+                CONTACT
               </Link>
             </nav>
             <MobileMenu />

@@ -43,7 +43,7 @@ export function MobileMenu() {
         >
           <div className="min-h-full w-full" onClick={() => setIsOpen(false)} />
           <nav className="flex min-h-full min-w-[15rem] flex-col bg-light-1 px-4 shadow-lg dark:bg-dark-1">
-            <section className="flex items-center justify-between border-b border-gray p-4">
+            <section className="border-cm-gray flex items-center justify-between border-b p-4">
               <ThemeSelector />
               <ExitIcon
                 className="h-6 w-6 fill-dark-1 hover:cursor-pointer dark:fill-light-1"
@@ -52,12 +52,12 @@ export function MobileMenu() {
             </section>
             <button
               onClick={() => handleNavigate("/")}
-              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10 dark:hover:bg-gray"
+              className="dark:hover:bg-cm-gray my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10"
             >
               <HomeIcon
                 className={`h-4 w-4 ${
                   path === "/"
-                    ? "fill-orange dark:fill-blue"
+                    ? "dark:fill-cm-blue fill-cm-orange"
                     : "fill-dark-1 dark:fill-light-1"
                 }`}
               />
@@ -65,12 +65,12 @@ export function MobileMenu() {
             </button>
             <button
               onClick={() => handleNavigate("/about")}
-              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10 dark:hover:bg-gray"
+              className="dark:hover:bg-cm-gray my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10"
             >
               <AboutIcon
                 className={`h-4 w-4 ${
                   path === "/about"
-                    ? "fill-orange dark:fill-blue"
+                    ? "dark:fill-cm-blue fill-cm-orange"
                     : "fill-dark-1 dark:fill-light-1"
                 }`}
               />
@@ -78,12 +78,12 @@ export function MobileMenu() {
             </button>
             <button
               onClick={() => handleNavigate("/projects")}
-              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10 dark:hover:bg-gray"
+              className="dark:hover:bg-cm-gray my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10"
             >
               <ProjectIcon
                 className={`h-4 w-4 ${
                   path === "/projects"
-                    ? "fill-orange dark:fill-blue"
+                    ? "dark:fill-cm-blue fill-cm-orange"
                     : "fill-dark-1 dark:fill-light-1"
                 }`}
               />
@@ -91,18 +91,18 @@ export function MobileMenu() {
             </button>
             <button
               onClick={() => handleNavigate("/contact")}
-              className="my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10 dark:hover:bg-gray"
+              className="dark:hover:bg-cm-gray my-2 flex items-center gap-x-2 rounded-md px-4 py-2 hover:cursor-pointer hover:bg-dark-1/10"
             >
               <ContactIcon
                 className={`h-4 w-4 ${
                   path === "/contact"
-                    ? "fill-orange dark:fill-blue"
+                    ? "dark:fill-cm-blue fill-cm-orange"
                     : "fill-dark-1 dark:fill-light-1"
                 }`}
               />
               CONTACT
             </button>
-            <footer className="mt-auto flex items-center gap-x-6 border-t border-gray p-4">
+            <footer className="border-cm-gray mt-auto flex items-center gap-x-6 border-t p-4">
               <a target="_blank" href={GITHUB}>
                 <GitHubIcon className="h-6 w-6 fill-dark-1 hover:cursor-pointer dark:fill-light-1" />
               </a>

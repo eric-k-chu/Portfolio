@@ -11,9 +11,9 @@ export function ThemeSelector() {
       whileTap={{ rotate: 360 }}
     >
       {theme === "light" ? (
-        <Sun className="h-6 w-6 fill-orange pt-[1px]" />
+        <Sun className="fill-cm-orange h-6 w-6 pt-[1px]" />
       ) : (
-        <Moon className="h-6 w-6 fill-blue pt-[1px]" />
+        <Moon className="fill-cm-blue h-6 w-6 pt-[1px]" />
       )}
     </motion.button>
   );

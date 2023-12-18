@@ -2,7 +2,13 @@ import { useTheme } from "./hooks";
 import { ThemeContext } from "./components/ThemeContext";
 import { Route, Routes } from "react-router-dom";
 import { NavBar } from "./components";
-import { LandingPage, AboutPage, NotFoundPage, ProjectsPage } from "./pages";
+import {
+  LandingPage,
+  AboutPage,
+  NotFoundPage,
+  ProjectsPage,
+  ContactPage,
+} from "./pages";
 import { ProjectDetailsPage } from "./pages/ProjectDetailsPage";
 
 export default function App() {
@@ -21,6 +27,7 @@ export default function App() {
             path="projects/:projectName"
             element={<ProjectDetailsPage />}
           />
+          <Route path="contact" element={<ContactPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
