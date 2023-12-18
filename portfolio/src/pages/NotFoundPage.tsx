@@ -11,7 +11,7 @@ export function NotFoundPage() {
       </h2>
       <Link
         to="/"
-        className="mt-4 scale-100 rounded-full bg-orange px-6 py-2 text-sm text-dark-1 shadow-sm transition-transform hover:scale-110 dark:bg-blue md:text-base"
+        className="dark:bg-cm-blue bg-cm-orange mt-4 scale-100 rounded-full px-6 py-2 text-sm text-dark-1 shadow-sm transition-transform hover:scale-110 md:text-base"
       >
         GO HOME
       </Link>

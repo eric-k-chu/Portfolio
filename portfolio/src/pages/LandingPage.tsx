@@ -25,7 +25,7 @@ export function LandingPage() {
             variants={showAndHide}
           >
             A{" "}
-            <span className="bg-gradient-to-r from-orange to-blue bg-clip-text font-semibold text-transparent">
+            <span className="to-cm-blue from-cm-orange bg-gradient-to-r bg-clip-text font-semibold text-transparent">
               Full-Stack
             </span>{" "}
             Web Developer
@@ -52,9 +52,10 @@ export function LandingPage() {
             animate="appear"
             variants={showAndHide}
             whileHover={{ scale: 1.1 }}
-            className="mt-8 rounded-md bg-gradient-to-r from-orange to-blue p-2 px-6 text-sm text-dark-1 shadow-md md:text-base lg:text-lg"
+            className="to-cm-blue from-cm-orange mt-8 rounded-md bg-gradient-to-r p-2 px-6 text-sm font-semibold text-dark-1 shadow-md md:text-base lg:text-lg"
+            onClick={() => navigate("/contact")}
           >
-            Hire Me
+            CONTACT ME
           </motion.button>
         </div>
         <motion.div
