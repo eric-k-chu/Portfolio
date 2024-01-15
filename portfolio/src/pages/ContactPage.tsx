@@ -54,7 +54,7 @@ export function ContactPage() {
         </h1>
         <div className="flex w-1/3 flex-col">
           <label
-            className="text-cm-gray block text-sm font-medium leading-6"
+            className="block text-sm font-medium leading-6 text-cm-gray"
             htmlFor="name"
           >
             Your Name
@@ -64,14 +64,14 @@ export function ContactPage() {
               id="name"
               value={name}
               onChange={(e) => setName(e.currentTarget.value)}
-              className="dark:border-cm-gray border-gray-300 dark:border-cm-gray block w-full rounded-md border bg-light-1 px-2 py-1.5 shadow-md shadow-light-s dark:bg-dark-2"
+              className="block w-full rounded-md border border-gray-300 bg-light-1 px-2 py-1.5 shadow-md shadow-light-s dark:border-cm-gray dark:bg-dark-2"
               type="text"
             />
           </div>
         </div>
         <div className="flex w-1/3 flex-col">
           <label
-            className="text-cm-gray block text-sm font-medium leading-6"
+            className="block text-sm font-medium leading-6 text-cm-gray"
             htmlFor="email"
           >
             Your Email
@@ -81,14 +81,14 @@ export function ContactPage() {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.currentTarget.value)}
-              className="dark:border-cm-gray border-gray-300 dark:border-cm-gray block w-full rounded-md border bg-light-1 px-2 py-1.5 shadow-md shadow-light-s dark:bg-dark-2"
+              className="block w-full rounded-md border border-gray-300 bg-light-1 px-2 py-1.5 shadow-md shadow-light-s dark:border-cm-gray dark:bg-dark-2"
               type="email"
             />
           </div>
         </div>
         <div className="flex w-1/3 flex-col">
           <label
-            className="text-cm-gray block text-sm font-medium leading-6"
+            className="block text-sm font-medium leading-6 text-cm-gray"
             htmlFor="message"
           >
             Message
@@ -99,11 +99,11 @@ export function ContactPage() {
               value={message}
               rows={10}
               onChange={(e) => setMessage(e.currentTarget.value)}
-              className="dark:border-cm-gray border-gray-300 block w-full resize-none rounded-md border bg-light-1 px-2 py-1.5 shadow-md shadow-light-s dark:bg-dark-2"
+              className="block w-full resize-none rounded-md border border-gray-300 bg-light-1 px-2 py-1.5 shadow-md shadow-light-s dark:border-cm-gray dark:bg-dark-2"
             />
           </div>
         </div>
-        <button className="bg-blue-600 w-1/3 rounded-md px-4 py-2 font-semibold text-light-1">
+        <button className="w-1/3 rounded-md bg-blue-600 px-4 py-2 font-semibold text-light-1">
           SEND
         </button>
       </form>
