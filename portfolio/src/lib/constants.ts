@@ -33,6 +33,48 @@ export interface IProject {
 }
 
 export const PROJECTS: Record<string, IProject> = {
+  "castle-v2": {
+    key: "castle-v2",
+    title: "Castle v2",
+    alt: "screenshot of Castle homepage",
+    imgSrc: `${import.meta.env.BASE_URL}castle_v2/home.png`,
+    desc: "Chess.com API-driven website using Next.js",
+    github: "https://github.com/eric-k-chu/Castle-v2",
+    live: "https://castle2.vercel.app/",
+    features: [
+      {
+        feat: "Searching for a player",
+        desc: "Users can search for a player",
+        imgSrc: `${import.meta.env.BASE_URL}castle_v2/search.PNG`,
+      },
+      {
+        feat: "Viewing leaderboards",
+        desc: "Users can view the leaderboards of Chess.com",
+        imgSrc: `${import.meta.env.BASE_URL}castle_v2/leaderboards.PNG`,
+      },
+      {
+        feat: "Viewing countries",
+        desc: "Users can view the players and clubs of a country that plays on Chess.com",
+        imgSrc: `${import.meta.env.BASE_URL}castle_v2/countries.PNG`,
+      },
+      {
+        feat: "Viewing streamers",
+        desc: "Users can see a list of Chess.com streamers",
+        imgSrc: `${import.meta.env.BASE_URL}castle_v2/streamers.PNG`,
+      },
+      {
+        feat: "Viewing daily puzzle",
+        desc: "Users can see the daily puzzle and a random daily puzzle",
+        imgSrc: `${import.meta.env.BASE_URL}castle_v2/daily_puzzle.PNG`,
+      },
+      {
+        feat: "Viewing a random daily puzzle",
+        desc: "Users can see a random puzzle and a random daily puzzle",
+        imgSrc: `${import.meta.env.BASE_URL}castle_v2/random.PNG`,
+      },
+    ],
+    tags: ["Next.js", "TypeScript", "TailwindCSS"],
+  },
   artus: {
     key: "artus",
     title: "Artus",

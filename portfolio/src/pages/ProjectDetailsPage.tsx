@@ -32,7 +32,7 @@ export function ProjectDetailsPage() {
         <NotFound404Icon className="h-40 w-40 fill-dark-1 dark:fill-light-1" />
         <div className="mt-10">{error.message}</div>
         <button
-          className="to-cm-blue from-cm-orange mt-8 scale-100 rounded-lg bg-gradient-to-r p-2 px-6 text-sm font-semibold text-dark-1 shadow-md transition-transform hover:scale-[1.05] md:text-base lg:text-lg"
+          className="mt-8 scale-100 rounded-lg bg-gradient-to-r from-cm-orange to-cm-blue p-2 px-6 text-sm font-semibold text-dark-1 shadow-md transition-transform hover:scale-[1.05] md:text-base lg:text-lg"
           onClick={() => navigate("/projects")}
         >
           BACK TO PROJECTS
@@ -50,7 +50,7 @@ export function ProjectDetailsPage() {
     >
       <div className="mb-4 flex w-full items-center gap-x-2 font-semibold">
         <h3
-          className="hover:to-cm-blue hover:from-cm-orange inline-block select-none hover:cursor-pointer hover:bg-gradient-to-r hover:bg-clip-text hover:text-transparent"
+          className="inline-block select-none hover:cursor-pointer hover:bg-gradient-to-r hover:from-cm-orange hover:to-cm-blue hover:bg-clip-text hover:text-transparent"
           onClick={() => navigate("/projects")}
         >
           PROJECTS
