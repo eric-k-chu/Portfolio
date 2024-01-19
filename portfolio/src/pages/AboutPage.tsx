@@ -69,7 +69,7 @@ export function AboutPage() {
                         Teaching Assistant
                       </td>
                       <td className="px-6 py-4 text-sm">Learning Fuze</td>
-                      <td className="px-6 py-4 text-sm">08 / 2023</td>
+                      <td className="px-6 py-4 text-sm">12 / 2023</td>
                       <td className="px-6 py-4 text-end text-sm">-</td>
                     </tr>
                   </tbody>
